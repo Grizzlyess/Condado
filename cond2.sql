@@ -39,8 +39,8 @@ CREATE TABLE pedido_livro (
     id_pedido INT auto_increment,
     qtd_pedido INT,
     PRIMARY KEY (isbn, id_pedido),
-    FOREIGN KEY (isbn) REFERENCES livro(isbn),
-    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
+    FOREIGN KEY (isbn) REFERENCES livro(isbn) ON DELETE CASCADE,
+    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido) ON DELETE CASCADE
 );
 
  -- drop database condado2;
