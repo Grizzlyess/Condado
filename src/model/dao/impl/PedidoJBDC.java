@@ -5,6 +5,7 @@ import model.dao.PedidoDao;
 import model.entities.Pedido;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PedidoJBDC implements PedidoDao {
@@ -69,11 +70,41 @@ public class PedidoJBDC implements PedidoDao {
 
     @Override
     public void deletarPorid(int id) {
-
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement("delete from pedido where id_pedido = ?;");
+            st.setInt(1,id);
+            st.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Erroa ao excluir",e);
+        }finally {
+            DB.closeStatement(st);
+        }
     }
 
     @Override
     public List<Pedido> procurarTodos() {
-        return List.of();
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try {
+            st = conn.prepareStatement("SELECT * FROM pedido ORDER BY id_pedido");
+            rs = st.executeQuery();
+            List<Pedido> lista = new ArrayList<>();
+            while (rs.next()) {
+                Pedido ped = new Pedido();
+                ped.setId_pedido(rs.getInt("id_pedido"));
+                ped.setId_cliente(rs.getString("id_cliente"));
+                ped.setData_pedido(rs.getDate("data_pedido").toLocalDate());
+                ped.setForma_pagamento(rs.getString("forma_pagamento"));
+                ped.setPreco_pedido(rs.getDouble("preco_pedido"));
+                lista.add(ped);
+            }
+            return lista;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            DB.closeStatement(st);
+            DB.closeResultSet(rs);
+        }
     }
 }
