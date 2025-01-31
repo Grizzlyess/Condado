@@ -1,11 +1,11 @@
 package model.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Pedido {
     private int id_pedido;
     private String id_cliente;
-    private Date data_pedido;
+    private LocalDate data_pedido;
     private String forma_pagamento;
     private double preco_pedido;
     private String fkid_cliente;
@@ -34,11 +34,11 @@ public class Pedido {
         this.id_cliente = id_cliente;
     }
 
-    public Date getData_pedido() {
+    public LocalDate getData_pedido() {
         return data_pedido;
     }
 
-    public void setData_pedido(Date data_pedido) {
+    public void setData_pedido(LocalDate data_pedido) {
         this.data_pedido = data_pedido;
     }
 
