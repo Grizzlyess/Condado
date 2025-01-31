@@ -1,8 +1,11 @@
 package model.entities;
 
+import java.time.LocalDate;
+
 public class Cliente {
     private String id;
     private String nome;
+    private LocalDate dataNascimento;
     private String email;
     private String contato;
     
@@ -18,6 +21,13 @@ public class Cliente {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return this.dataNascimento;
+    }
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
     
     public String getEmail() {
