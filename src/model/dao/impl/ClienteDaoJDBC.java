@@ -5,6 +5,7 @@ import model.dao.ClienteDao;
 import model.entities.Cliente;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -48,7 +49,7 @@ public class ClienteDaoJDBC implements ClienteDao {
                 Cliente cliente = new Cliente();
                 cliente.setId(rs.getString("id_cliente"));
                 cliente.setNome(rs.getString("nome_cliente"));
-                cliente.setDate(Date.valueOf(rs.getDate("data_nascimento_cliente")));
+                cliente.setDataNascimento(rs.getDate("data_nascimento_cliente").toLocalDate());
                 cliente.setEmail(rs.getString("email_cliente"));
                 cliente.setContato(rs.getString("contato_cliente"));
 
@@ -69,12 +70,7 @@ public class ClienteDaoJDBC implements ClienteDao {
         PreparedStatement st = null;
 
         try {
-            st = conn.prepareStatement("update aluno
-                                        set nome = ?,
-                                            email = ?,
-                                            dataNascimento = ?,
-                                            contato = ?
-                                            where id = ?");
+            st = conn.prepareStatement("update aluno set nome_cliente = ?, email_cliente = ?, data_nascimento_cliente = ?, contato_cliente = ? where id_cliente = ?");
             
             st.setString(1, cliente.getNome());
             st.setString(2, cliente.getEmail());
@@ -119,7 +115,7 @@ public class ClienteDaoJDBC implements ClienteDao {
                 Cliente cliente = new Cliente();
                 cliente.setId(rs.getString("id_cliente"));
                 cliente.setNome(rs.getString("nome_cliente"));
-                cliente.setDate(Date.valueOf(rs.getDate("data_nascimento_cliente")));
+                cliente.setDataNascimento(rs.getDate("data_nascimento_cliente").toLocalDate());
                 cliente.setEmail(rs.getString("email_cliente"));
                 cliente.setContato(rs.getString("contato_cliente"));
 
