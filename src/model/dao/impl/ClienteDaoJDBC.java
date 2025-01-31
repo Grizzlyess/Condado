@@ -20,11 +20,12 @@ public class ClienteDaoJDBC implements ClienteDao {
         PreparedStatement st = null;
 
         try {
-            st = conn.prepareStatement("insert into cliente(id, nome, email, contato) values (?,?,?,?)");
+            st = conn.prepareStatement("insert into cliente(id_cliente, nome_cliente, data_nascimento_cliente, email_cliente, contato_cliente) values (?,?,?,?,?)");
             st.setString(1, cliente.getId());
             st.setString(2, cliente.getNome());
-            st.setString(3, cliente.getEmail());
-            st.setString(4, cliente.getContato());
+            st.setDate(3, Date.valueOf(cliente.getDataNascimento()));
+            st.setString(4, cliente.getEmail());
+            st.setString(5, cliente.getContato());
             st.executeUpdate();
         } catch(SQLException e) {
             throw new RuntimeException(e);
@@ -39,16 +40,17 @@ public class ClienteDaoJDBC implements ClienteDao {
         ResultSet rs = null;
 
         try {
-            st = conn.prepareStatement("select * from aluno where id = ?");
+            st = conn.prepareStatement("select * from aluno where id_cliente = ?");
             st.setString(1, id);
 
             rs = st.executeQuery();
             if(rs.next()) {
                 Cliente cliente = new Cliente();
-                cliente.setId(rs.getString("id"));
-                cliente.setNome(rs.getString("nome"));
-                cliente.setEmail(rs.getString("email"));
-                cliente.setContato(rs.getString("contato"));
+                cliente.setId(rs.getString("id_cliente"));
+                cliente.setNome(rs.getString("nome_cliente"));
+                cliente.setDate(Date.valueOf(rs.getDate("data_nascimento_cliente")));
+                cliente.setEmail(rs.getString("email_cliente"));
+                cliente.setContato(rs.getString("contato_cliente"));
 
                 return cliente;
             }
@@ -70,13 +72,15 @@ public class ClienteDaoJDBC implements ClienteDao {
             st = conn.prepareStatement("update aluno
                                         set nome = ?,
                                             email = ?,
+                                            dataNascimento = ?,
                                             contato = ?
                                             where id = ?");
             
             st.setString(1, cliente.getNome());
             st.setString(2, cliente.getEmail());
-            st.setString(3, cliente.getContato());
-            st.setString(4, cliente.getId());
+            st.setDate(3, Date.valueOf(cliente.getDataNascimento()));
+            st.setString(4, cliente.getContato());
+            st.setString(5, cliente.getId());
             st.executeUpdate();
         } catch(SQLException e) {
             throw new RuntimeException(e);
@@ -90,7 +94,7 @@ public class ClienteDaoJDBC implements ClienteDao {
         PreparedStatement st = null;
 
         try {
-            st = conn.prepareStatement("delete from aluno where id = ?");
+            st = conn.prepareStatement("delete from aluno where id_cliente = ?");
             st.setString(1, id);
             st.executeUpdate();
         } catch(SQLException e) {
@@ -106,17 +110,18 @@ public class ClienteDaoJDBC implements ClienteDao {
         ResultSet rs = null;
 
         try {
-            st = conn.prepareStatement("select * from aluno order by id");
+            st = conn.prepareStatement("select * from aluno order by id_cliente");
             rs = st.executeQuery();
 
             List<Cliente> lista = new ArrayList<>();
 
             while(rs.next()) {
                 Cliente cliente = new Cliente();
-                cliente.setId(rs.getString("id"));
-                cliente.setNome(rs.getString("nome"));
-                cliente.setEmail(rs.getString("email"));
-                cliente.setContato(rs.getString("contato"));
+                cliente.setId(rs.getString("id_cliente"));
+                cliente.setNome(rs.getString("nome_cliente"));
+                cliente.setDate(Date.valueOf(rs.getDate("data_nascimento_cliente")));
+                cliente.setEmail(rs.getString("email_cliente"));
+                cliente.setContato(rs.getString("contato_cliente"));
 
                 lista.add(cliente);
             }
