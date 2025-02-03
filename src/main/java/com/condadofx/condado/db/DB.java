@@ -1,4 +1,4 @@
-package db;
+package com.condadofx.condado.db;
 
 import java.sql.*;
 
@@ -9,7 +9,7 @@ public class DB {
     public static Connection getConnection(){
         if(conn==null){
             try {
-                conn = DriverManager.getConnection ("jdbc:mysql://localhost:3306/teste","root",1234);
+                conn = DriverManager.getConnection ("jdbc:mysql://localhost:3306/teste","root","1234");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }

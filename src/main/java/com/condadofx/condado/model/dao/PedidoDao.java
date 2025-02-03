@@ -1,6 +1,7 @@
-package model.dao;
+package com.condadofx.condado.model.dao;
 
-import model.entities.Pedido;
+import com.condadofx.condado.model.entities.Pedido;
+
 import java.util.List;
 
 public interface PedidoDao {

@@ -1,6 +1,6 @@
-package model.dao;
+package com.condadofx.condado.model.dao;
 
-import model.entities.Cliente;
+import com.condadofx.condado.model.entities.Cliente;
 import java.util.List;
 
 public interface ClienteDao {

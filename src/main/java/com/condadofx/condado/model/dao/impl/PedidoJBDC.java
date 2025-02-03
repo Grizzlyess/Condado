@@ -1,8 +1,9 @@
-package model.dao.impl;
+package com.condadofx.condado.model.dao.impl;
 
-import db.DB;
-import model.dao.PedidoDao;
-import model.entities.Pedido;
+
+import com.condadofx.condado.db.DB;
+import com.condadofx.condado.model.dao.PedidoDao;
+import com.condadofx.condado.model.entities.Pedido;
 
 import java.sql.*;
 import java.util.ArrayList;

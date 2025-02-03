@@ -1,4 +1,4 @@
-package model.entities;
+package com.condadofx.condado.model.entities;
 
 import java.time.LocalDate;
 
