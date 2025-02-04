@@ -38,80 +38,45 @@ public class LivroDaoJDBC implements LivroDao {
     }
 
     @Override
-    public void atualizarTitulo(Livro book) {
-        PreparedStatement st = null;
-        try {
-            st = conn.prepareStatement("update livro set titulo = ? where isbn = ?");
-            st.setString(1, book.getTitulo());
-            st.setString(2, book.getIsbn());
-            st.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }finally {
-            DB.closeStatement(st);
-        }
-    }
+    public void atualizarLivro(Livro book) {
+            PreparedStatement st = null;
+            try {
+                st = conn.prepareStatement(
+                        "UPDATE livro " +
+                                "SET autor = ?, " +
+                                "genero = ?, " +
+                                "titulo = ? " +  // Adicionado espaço antes do WHERE
+                                "qtd_estoque = ? " +
+                                "preco_livro = ?, " +
+                                "sinopse = ?, " +
+                                "editora = ?, " +
+                                "foto = ?, " +
+                                "WHERE isbn = ?");
 
-    @Override
-    public void atualizarAutor(Livro book) {
-        PreparedStatement st = null;
-        try {
-            st = conn.prepareStatement("update livro set autor = ? where isbn = ?");
-            st.setString(1, book.getAutor());
-            st.setString(2, book.getIsbn());
-            st.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }finally {
-            DB.closeStatement(st);
-        }
-    }
+                st.setString(1, book.getAutor());
+                st.setString(2, book.getGenero());
+                st.setString(3, book.getTitulo());
+                st.setInt(4, book.getQtd_estoque());
+                st.setFloat(5, book.getPreco_livro());
+                st.setString(6, book.getSinopse());
+                st.setString(7, book.getEditora());
+                st.setBytes(8, book.getFoto());
+                st.setString(9, book.getIsbn());
 
-    @Override
-    public void atualizarGenero(Livro book) {
-        PreparedStatement st = null;
-        try {
-            st = conn.prepareStatement("update livro set genero = ? where isbn = ?");
-            st.setString(1, book.getGenero());
-            st.setString(2, book.getIsbn());
-            st.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }finally {
-            DB.closeStatement(st);
-        }
+                int linhasAfetadas = st.executeUpdate(); // Retorna quantas linhas foram alteradas
+                if (linhasAfetadas > 0) {
+                    System.out.println("Livro atualizado com sucesso! ISBN: " + book.getIsbn());
+                } else {
+                    System.out.println("Nenhum livro encontrado com esse ISBN.");
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException("Erro ao atualizar livro", e);
+            } finally {
+                DB.closeStatement(st);
+            }
 
     }
 
-    @Override
-    public void atualizarEditora(Livro book) {
-        PreparedStatement st = null;
-        try {
-            st = conn.prepareStatement("update livro set editora = ? where isbn = ?");
-            st.setString(1, book.getEditora());
-            st.setString(2, book.getIsbn());
-            st.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }finally {
-            DB.closeStatement(st);
-        }
-
-    }
-
-    @Override
-    public void deletarPorISBN(String isbn) {
-        PreparedStatement st = null;
-        try{
-            st = conn.prepareStatement("delete from livro where isbn=?");
-            st.setString(1, isbn);
-            st.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }finally {
-            DB.closeStatement(st);
-        }
-    }
 
     @Override
     public Livro procurarPorISBN(String isbn) {
@@ -278,6 +243,22 @@ public class LivroDaoJDBC implements LivroDao {
             DB.closeStatement(st);
         }
         return null;
+    }
+
+    @Override
+    public void deletarLivro(String isbn) {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement("DELETE FROM livro WHERE isbn = ?");
+
+            st.setString(1, isbn);
+
+            st.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao excluir livro", e);
+        } finally {
+            DB.closeStatement(st);
+        }
     }
 
     @Override
