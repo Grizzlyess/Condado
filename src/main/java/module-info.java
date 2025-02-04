@@ -6,4 +6,6 @@ module com.condadofx.condado {
 
     opens com.condadofx.condado to javafx.fxml;
     exports com.condadofx.condado;
+    exports com.condadofx.condado.controllers;
+    opens com.condadofx.condado.controllers to javafx.fxml;
 }

@@ -1,16 +1,15 @@
-package com.condadofx.condado.controller;
+package com.condadofx.condado.controllers;
+
 import com.condadofx.condado.model.entities.Livro;
 import com.condadofx.condado.model.dao.DaoFactory;
-import com.condadofx.condado.model.dao.LivroDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
-import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -41,18 +40,19 @@ public class ProcurarLivroController implements Initializable {
     private TextField editora;
     @FXML
     private ImageView foto;
-
     @FXML
     private Button buscar;
-
     @FXML
     private Button atualizar;
-
     @FXML
     private Button deletar;
-
     private Livro livro;
-
+    //Colocado T no final para diferenciar
+    @FXML
+    private TextField isbnT;
+    @FXML
+    private Button salvar;
+    File file;
 
     @FXML
     public void onBuscarClick(){
@@ -60,7 +60,6 @@ public class ProcurarLivroController implements Initializable {
         if(isbn.getValue()!=null) {
             String isbnSelecionado = (String) isbn.getValue();
             livro = DaoFactory.createLivroDao().procurarPorISBN(isbnSelecionado);
-
             if (livro != null) {
                 titulo.setText(livro.getTitulo());
                 genero.setText(livro.getGenero());
@@ -68,8 +67,6 @@ public class ProcurarLivroController implements Initializable {
                 autor.setText(livro.getAutor());
                 qtd_estoque.setText(livro.getQtd_estoque() + "");
                 precoLivro.setText(String.format("%.2f", livro.getPreco_livro()));
-
-
                 if (livro.getFoto() != null) {
                     javafx.scene.image.Image image = new Image(new ByteArrayInputStream(livro.getFoto()));
                     foto.setImage(image);
@@ -86,7 +83,7 @@ public class ProcurarLivroController implements Initializable {
                // Alertas.mostrarAlerta(null, null, "Aluno não encontrado!", Alert.AlertType.ERROR);
         }
     }
-
+    @FXML
     public void onAtualizarClick(){
         livro.setTitulo(titulo.getText());
         livro.setAutor(autor.getText());
@@ -100,8 +97,6 @@ public class ProcurarLivroController implements Initializable {
             //Alertas.mostrarAlerta(null, null, "Erro! Digite valores numéricos válidos para quantidade ou preço.", Alert.AlertType.ERROR);
             return;
         }
-
-
         if(file!=null){
             byte[] fileBytes = new byte[0];
             try {
@@ -113,21 +108,38 @@ public class ProcurarLivroController implements Initializable {
         }
         DaoFactory.createLivroDao().atualizarLivro(livro);
         //Alertas.mostrarAlerta(null,null,"Aluno atualizado com sucesso!", Alert.AlertType.INFORMATION);
-
     }
 
+    @FXML
+    void onSalvarClick() throws IOException {
+        // Criação do objeto Livro
+        Livro livro = new Livro();
+        livro.setIsbn(isbnT.getText());
+        livro.setAutor(autor.getText());
+        livro.setGenero(genero.getText());
+        livro.setTitulo(titulo.getText());
+        livro.setQtd_estoque(Integer.parseInt(qtd_estoque.getText()));  // Convertendo para int
+        livro.setPreco_livro(Float.parseFloat(precoLivro.getText()));  // Convertendo para float
+        livro.setSinopse(sinopse.getText());
+        livro.setEditora(editora.getText());
+        // Processamento da foto
+        if (file != null) {
+            byte[] fileBytes = Files.readAllBytes(file.toPath());
+            livro.setFoto(fileBytes);
+        }
+        // Salvando o livro no banco
+        DaoFactory.createLivroDao().inserir(livro);
+        // Exibindo uma mensagem de sucesso
+        //Alertas.mostrarAlerta(null, null, "Livro cadastrado com sucesso!", Alert.AlertType.INFORMATION);
+    }
+    @FXML
     public void onDeletarClick(){
-
         DaoFactory.createLivroDao().deletarLivro(livro.getIsbn());
-
         //Alertas.mostrarAlerta(null,null,"Aluno deletado com sucesso!", Alert.AlertType.INFORMATION);
         atualizar.setVisible(false);
         deletar.setVisible(false);
         isbn.getItems().remove(livro.getIsbn());
-
     }
-
-    File file;
     @FXML
     void onFotoClick(){
         FileChooser fc = new FileChooser();
@@ -135,13 +147,7 @@ public class ProcurarLivroController implements Initializable {
         if(file!=null){
             foto.setImage(new Image(file.toURI().toString()));
         }
-
-
     }
-
-
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) {}
 }

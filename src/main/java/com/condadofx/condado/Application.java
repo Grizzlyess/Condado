@@ -1,4 +1,4 @@
-package com.condadofx.condado.controller;
+package com.condadofx.condado;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
