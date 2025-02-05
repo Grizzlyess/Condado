@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.ProcurarLivro">
+   <children>
+      <ComboBox layoutX="264.0" layoutY="65.0" prefWidth="150.0" promptText="isbn" />
+      <TextField layoutX="264.0" layoutY="388.0" promptText="sinopse" />
+      <TextField layoutX="264.0" layoutY="122.0" promptText="autor" />
+      <TextField layoutX="264.0" layoutY="430.0" promptText="editora" />
+      <TextField layoutX="264.0" layoutY="334.0" promptText="preço" />
+      <TextField layoutX="264.0" layoutY="272.0" promptText="qtd estoque" />
+      <TextField layoutX="264.0" layoutY="218.0" promptText="título" />
+      <TextField layoutX="264.0" layoutY="173.0" promptText="gênero" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="407.0" layoutY="500.0" mnemonicParsing="false" text="Deletar" />
+      <Button layoutX="292.0" layoutY="500.0" mnemonicParsing="false" text="Atualizar" />
+      <Button layoutX="184.0" layoutY="500.0" mnemonicParsing="false" text="Buscar" />
+   </children>
+</AnchorPane>

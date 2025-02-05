@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.ListarTodosClientes">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <BorderPane prefHeight="60.0" prefWidth="800.0">
+               <center>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </center>
+            </BorderPane>
+            <TableView prefHeight="541.0" prefWidth="800.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="206.36436462402344" text="Nome" />
+                  <TableColumn prefWidth="138.182373046875" text="Data Nascimento" />
+                  <TableColumn prefWidth="163.63702392578125" text="Email" />
+                  <TableColumn prefWidth="219.0916748046875" text="Contato" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

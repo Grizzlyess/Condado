@@ -10,7 +10,7 @@ public class Application extends javafx.application.Application {
     private static Scene scene;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("application_view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("condado-design.fxml"));
         scene = new Scene(fxmlLoader.load());
         stage.setTitle("LIVRARIA O CONDADO");
         stage.setScene(scene);

@@ -19,21 +19,26 @@
             </Text>
          </center>
       </BorderPane>
-      <MenuBar prefHeight="402.0" prefWidth="600.0">
+      <MenuBar prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #AEE5A2;">
         <menus>
           <Menu mnemonicParsing="false" text="Cliente">
             <items>
               <MenuItem mnemonicParsing="false" text="Cadastrar" />
-                  <MenuItem mnemonicParsing="false" text="Buscar" />
-                  <MenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Procurar" />
+                  <MenuItem mnemonicParsing="false" text="Listar Todos" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Pedido" />
+          <Menu mnemonicParsing="false" text="Pedido">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Procurar" />
+                  <MenuItem mnemonicParsing="false" text="Listar Todos" />
+               </items></Menu>
           <Menu mnemonicParsing="false" text="Livro">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Procurar" />
+                  <MenuItem mnemonicParsing="false" text="Listar Todos" />
                </items>
           </Menu>
         </menus>
