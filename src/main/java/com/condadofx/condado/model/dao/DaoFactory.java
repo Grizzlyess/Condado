@@ -11,4 +11,6 @@ public interface DaoFactory {
     public static ClienteDao createClienteDao() {
         return new ClienteDaoJDBC(DB.getConnection());
     }
+
+    public static PedidoDao createPedidoDao(){return new PedidoJBDC(DB.getConnection());}
 }
