@@ -8,15 +8,6 @@ public class Pedido {
     private LocalDate data_pedido;
     private String forma_pagamento;
     private double preco_pedido;
-    private String fkid_cliente;
-
-    public String getFkid_cliente() {
-        return fkid_cliente;
-    }
-
-    public void setFkid_cliente(String fkid_cliente) {
-        this.fkid_cliente = fkid_cliente;
-    }
 
     public int getId_pedido() {
         return id_pedido;
