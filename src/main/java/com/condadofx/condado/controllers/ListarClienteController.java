@@ -1,4 +1,4 @@
-package com.condadofx.condado.controller;
+package com.condadofx.condado.controllers;
 
 import com.condadofx.condado.model.dao.DaoFactory;
 import com.condadofx.condado.model.entities.Cliente;

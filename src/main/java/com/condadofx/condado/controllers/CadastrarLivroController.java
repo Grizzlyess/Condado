@@ -1,4 +1,4 @@
-package com.condadofx.condado.controller;
+package com.condadofx.condado.controllers;
 import com.condadofx.condado.model.entities.Livro;
 import com.condadofx.condado.model.dao.DaoFactory;
 import javafx.fxml.FXML;

@@ -1,4 +1,4 @@
-package com.condadofx.condado.controller;
+package com.condadofx.condado.controllers;
 
 public class CadastrarPedidoController {
 }
