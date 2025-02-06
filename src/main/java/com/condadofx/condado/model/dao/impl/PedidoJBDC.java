@@ -77,7 +77,7 @@ public class PedidoJBDC implements PedidoDao {
             st.setInt(1,id);
             st.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Erroa ao excluir",e);
+            throw new RuntimeException("Erro ao excluir",e);
         }finally {
             DB.closeStatement(st);
         }

@@ -30,8 +30,7 @@ public class ListarPedidoController implements Initializable {
     private TableColumn<Pedido, String> colFormaPagamento;
     @FXML
     private TableColumn<Pedido, Double> colPrecoPedido;
-    @FXML
-    private TableColumn<Pedido, String> colFkIdCliente;
+
 
     private void carregarPedidos() {
         ObservableList<Pedido> pedidosList = FXCollections.observableArrayList();
@@ -54,7 +53,6 @@ public class ListarPedidoController implements Initializable {
         colDataPedido.setCellValueFactory(new PropertyValueFactory<>("data_pedido"));
         colFormaPagamento.setCellValueFactory(new PropertyValueFactory<>("forma_pagamento"));
         colPrecoPedido.setCellValueFactory(new PropertyValueFactory<>("preco_pedido"));
-        colFkIdCliente.setCellValueFactory(new PropertyValueFactory<>("fkid_cliente"));
 
         // Carregar os pedidos do banco de dados
         carregarPedidos();

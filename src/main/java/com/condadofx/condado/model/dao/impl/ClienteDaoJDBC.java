@@ -42,7 +42,7 @@ public class ClienteDaoJDBC implements ClienteDao {
         ResultSet rs = null;
 
         try {
-            st = conn.prepareStatement("select * from aluno where id_cliente = ?");
+            st = conn.prepareStatement("select * from cliente where id_cliente = ?");
             st.setString(1, id);
 
             rs = st.executeQuery();
@@ -71,7 +71,7 @@ public class ClienteDaoJDBC implements ClienteDao {
         PreparedStatement st = null;
 
         try {
-            st = conn.prepareStatement("update aluno set nome_cliente = ?, email_cliente = ?, data_nascimento_cliente = ?, contato_cliente = ? where id_cliente = ?");
+            st = conn.prepareStatement("update cliente set nome_cliente = ?, email_cliente = ?, data_nascimento_cliente = ?, contato_cliente = ? where id_cliente = ?");
             
             st.setString(1, cliente.getNome());
             st.setString(2, cliente.getEmail());
@@ -91,7 +91,7 @@ public class ClienteDaoJDBC implements ClienteDao {
         PreparedStatement st = null;
 
         try {
-            st = conn.prepareStatement("delete from aluno where id_cliente = ?");
+            st = conn.prepareStatement("delete from cliente where id_cliente = ?");
             st.setString(1, id);
             st.executeUpdate();
         } catch(SQLException e) {
@@ -107,7 +107,7 @@ public class ClienteDaoJDBC implements ClienteDao {
         ResultSet rs = null;
 
         try {
-            st = conn.prepareStatement("select * from aluno order by id_cliente");
+            st = conn.prepareStatement("select * from cliente order by id_cliente");
             rs = st.executeQuery();
 
             List<Cliente> lista = new ArrayList<>();
