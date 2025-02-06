@@ -64,9 +64,29 @@ public class ApplicationController {
     }
 
     @FXML
-    void onProcurarClick(){
+    void onProcurarLivroClick(){
         try {
             stage = com.condadofx.condado.Application.newStage("procurar_livro_view.fxml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @FXML
+    void onProcurarClienteClick(){
+        try {
+            stage = com.condadofx.condado.Application.newStage("procurar_cliente_view.fxml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @FXML
+    void onProcurarPedidoClick(){
+        try {
+            stage = com.condadofx.condado.Application.newStage("procurar_pedido_view.fxml");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
