@@ -37,13 +37,11 @@ public class CadastrarClienteController implements Initializable {
         Cliente cliente = new Cliente();
         cliente.setId(id.getText());
         cliente.setNome(nome.getText());
-
         // Convertendo a data de nascimento do DatePicker para LocalDate
         LocalDate localDate = dataNascimento.getValue();
         if (localDate != null) {
             cliente.setDataNascimento(Date.valueOf(localDate).toLocalDate()); // Convertendo para Date
         }
-
         cliente.setEmail(email.getText());
         cliente.setContato(contato.getText());
 
