@@ -36,10 +36,9 @@ public class ListarClienteController implements Initializable {
 
     private void carregarClientes() {
         // Criar uma instância do DAO para acessar os dados
-        ClienteDao clienteDao = DaoFactory.createClienteDao();
 
         // Buscar a lista de clientes do banco de dados
-        List<Cliente> clientes = clienteDao.procurarTodos();
+        List<Cliente> clientes = DaoFactory.createClienteDao().procurarTodos();
 
         // Limpar a lista existente para evitar duplicações
         clientesList.clear();

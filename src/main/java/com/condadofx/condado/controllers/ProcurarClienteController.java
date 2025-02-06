@@ -2,6 +2,7 @@ package com.condadofx.condado.controllers;
 
 import com.condadofx.condado.model.dao.DaoFactory;
 import com.condadofx.condado.model.entities.Cliente;
+import com.condadofx.condado.util.Alerta;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -58,11 +59,7 @@ public class ProcurarClienteController implements Initializable {
                 atualizar.setVisible(true);
                 deletar.setVisible(true);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Erro");
-                alert.setHeaderText(null);
-                alert.setContentText("Cliente não encontrado!");
-                alert.showAndWait();
+                Alerta.mostrarAlerta(Alert.AlertType.INFORMATION, "Erro!", "Cliente não encontrado");
             }
         }
     }
@@ -72,29 +69,17 @@ public class ProcurarClienteController implements Initializable {
         cliente.setNome(nome.getText());
         cliente.setEmail(email.getText());
         cliente.setContato(contato.getText());
-
         // Atualiza o cliente no banco de dados
         DaoFactory.createClienteDao().atualizar(cliente);
-
         // Exibe mensagem de sucesso
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Sucesso");
-        alert.setHeaderText(null);
-        alert.setContentText("Cliente atualizado com sucesso!");
-        alert.showAndWait();
+        Alerta.mostrarAlerta(Alert.AlertType.INFORMATION, "Atualizado!", "O cliente foi atualizado com sucesso");
     }
 
     @FXML
     public void onDeletarClick() {
         DaoFactory.createClienteDao().deletarPorId(cliente.getId());
-
         // Exibe mensagem de sucesso
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Sucesso");
-        alert.setHeaderText(null);
-        alert.setContentText("Cliente deletado com sucesso!");
-        alert.showAndWait();
-
+        Alerta.mostrarAlerta(Alert.AlertType.INFORMATION, "Deletado!", "O cliente foi deletado com sucesso");
         // Limpar os campos
         nome.clear();
         dataNascimento.clear();
@@ -133,8 +118,5 @@ public class ProcurarClienteController implements Initializable {
         // Converte a lista para ObservableList e adiciona à ComboBox
         ObservableList<String> obs = FXCollections.observableArrayList(idsClientes);
         idCliente.setItems(obs);
-
-
     }
-
 }

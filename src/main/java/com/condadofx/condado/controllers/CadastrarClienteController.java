@@ -2,6 +2,7 @@ package com.condadofx.condado.controllers;
 
 import com.condadofx.condado.model.dao.DaoFactory;
 import com.condadofx.condado.model.entities.Cliente;
+import com.condadofx.condado.util.Alerta;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -44,16 +45,10 @@ public class CadastrarClienteController implements Initializable {
         }
         cliente.setEmail(email.getText());
         cliente.setContato(contato.getText());
-
         // Salvando o cliente no banco de dados
         DaoFactory.createClienteDao().inserir(cliente);
-
         // Exibindo uma mensagem de sucesso
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Cadastro Realizado");
-        alert.setHeaderText(null);
-        alert.setContentText("Cliente cadastrado com sucesso!");
-        alert.showAndWait();
+        Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Cadastro Realizado","Cliente cadastrado");
     }
 
     @Override

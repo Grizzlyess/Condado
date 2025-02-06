@@ -1,10 +1,12 @@
 package com.condadofx.condado.controllers;
 import com.condadofx.condado.model.entities.Livro;
 import com.condadofx.condado.model.dao.DaoFactory;
+import com.condadofx.condado.util.Alerta;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -22,7 +24,7 @@ import java.util.ResourceBundle;
 
 public class ProcurarLivroController implements Initializable {
     @FXML
-    private ComboBox isbn;
+    private ComboBox<String> isbn;
     @FXML
     private TextField autor;
     @FXML
@@ -42,10 +44,8 @@ public class ProcurarLivroController implements Initializable {
 
     @FXML
     private Button buscar;
-
     @FXML
     private Button atualizar;
-
     @FXML
     private Button deletar;
 
@@ -80,8 +80,9 @@ public class ProcurarLivroController implements Initializable {
                 precoLivro.setEditable(true);
                 atualizar.setVisible(true);
                 deletar.setVisible(true);
-            } //else
-               // Alertas.mostrarAlerta(null, null, "Aluno não encontrado!", Alert.AlertType.ERROR);
+            } else {
+                Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Erro!","Livro não encontrado!");
+            }
         }
     }
 
@@ -95,10 +96,9 @@ public class ProcurarLivroController implements Initializable {
             livro.setQtd_estoque(Integer.parseInt(qtd_estoque.getText())); // Conversão para int
             livro.setPreco_livro(Float.parseFloat(precoLivro.getText()));  // Conversão para float
         } catch (NumberFormatException e) {
-            //Alertas.mostrarAlerta(null, null, "Erro! Digite valores numéricos válidos para quantidade ou preço.", Alert.AlertType.ERROR);
+            Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Erro nos valores!","Digite números válidos para qunatidade e preço!");
             return;
         }
-
 
         if(file!=null){
             byte[] fileBytes = new byte[0];
@@ -110,19 +110,16 @@ public class ProcurarLivroController implements Initializable {
             livro.setFoto(fileBytes);
         }
         DaoFactory.createLivroDao().atualizarLivro(livro);
-        //Alertas.mostrarAlerta(null,null,"Aluno atualizado com sucesso!", Alert.AlertType.INFORMATION);
-
+        Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Atualizado!","O livro foi atualizado com sucesso");
     }
 
     public void onDeletarClick(){
 
         DaoFactory.createLivroDao().deletarLivro(livro.getIsbn());
-
-        //Alertas.mostrarAlerta(null,null,"Aluno deletado com sucesso!", Alert.AlertType.INFORMATION);
+        Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Deletado","O livro foi deletado com sucesso");
         atualizar.setVisible(false);
         deletar.setVisible(false);
         isbn.getItems().remove(livro.getIsbn());
-
     }
 
     File file;
@@ -136,7 +133,6 @@ public class ProcurarLivroController implements Initializable {
 
 
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -166,5 +162,4 @@ public class ProcurarLivroController implements Initializable {
         ObservableList<String> obs = FXCollections.observableArrayList(isbns);
         isbn.setItems(obs);
     }
-
 }

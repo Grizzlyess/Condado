@@ -22,37 +22,24 @@ public class ListarLivrosController implements Initializable {
 
     @FXML
     private TableView<Livro> tabelaLivros;
-
     @FXML
     private TableColumn<Livro, String> colISBN;
-
     @FXML
     private TableColumn<Livro, String> colTitulo;
-
     @FXML
     private TableColumn<Livro, String> colAutor;
-
     @FXML
     private TableColumn<Livro, String> colGenero;
-
     @FXML
     private TableColumn<Livro, String> colEditora;
-
     @FXML
     private TableColumn<Livro, Integer> colQtdEstoque;
-
     @FXML
     private TableColumn<Livro, Float> colPreco;
-
     @FXML
     private TableColumn<Livro, String> colSinopse;
-
     @FXML
     private TableColumn<Livro, ImageView> colCapa;
-
-    private LivroDao livroDao = DaoFactory.createLivroDao();
-
-
 
     private void configurarTabela() {
         colISBN.setCellValueFactory(new PropertyValueFactory<>("isbn"));
@@ -79,7 +66,7 @@ public class ListarLivrosController implements Initializable {
     }
 
     private void carregarLivros() {
-        List<Livro> livros = livroDao.procurarTodos();
+        List<Livro> livros = DaoFactory.createLivroDao().procurarTodos();
         ObservableList<Livro> listaLivros = FXCollections.observableArrayList(livros);
         tabelaLivros.setItems(listaLivros);
     }
@@ -95,4 +82,3 @@ public class ListarLivrosController implements Initializable {
         carregarLivros();
     }
 }
-
