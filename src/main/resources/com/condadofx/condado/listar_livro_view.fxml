@@ -21,7 +21,7 @@
                   </Text>
                </center>
             </BorderPane>
-            <TableView prefHeight="541.0" prefWidth="800.0">
+            <TableView fx:id="tabelaLivros" prefHeight="541.0" prefWidth="800.0">
               <columns>
                 <TableColumn fx:id="colISBN" prefWidth="119.09128153324127" text="ISBN" />
                 <TableColumn fx:id="colTitulo" prefWidth="71.8184814453125" text="Título" />

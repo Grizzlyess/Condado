@@ -24,20 +24,20 @@
           <Menu mnemonicParsing="false" text="Cliente">
             <items>
               <MenuItem fx:id="cadastrarCliente" mnemonicParsing="false" onAction="#onCadastrarClienteClick" text="Cadastrar" />
-                  <MenuItem mnemonicParsing="false" text="Procurar" />
+                  <MenuItem fx:id="procurarCliente" mnemonicParsing="false" onAction="#onProcurarClienteClick" text="Procurar" />
                   <MenuItem fx:id="listarCliente" mnemonicParsing="false" onAction="#onListarClienteClick" text="Listar Todos" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Pedido">
                <items>
                   <MenuItem fx:id="cadastrarPedido" mnemonicParsing="false" onAction="#onCadastrarPedidoClick" text="Cadastrar" />
-                  <MenuItem mnemonicParsing="false" text="Procurar" />
+                  <MenuItem fx:id="procurarPedido" mnemonicParsing="false" onAction="#onProcurarPedidoClick" text="Procurar" />
                   <MenuItem fx:id="listarPedido" mnemonicParsing="false" onAction="#onListarPedidoClick" text="Listar Todos" />
                </items></Menu>
           <Menu mnemonicParsing="false" text="Livro">
                <items>
                   <MenuItem fx:id="cadastrarLivro" mnemonicParsing="false" onAction="#onCadastrarLivroClick" text="Cadastrar" />
-                  <MenuItem mnemonicParsing="false" text="Procurar" />
+                  <MenuItem fx:id="procurarLivro" mnemonicParsing="false" onAction="#onProcurarLivroClick" text="Procurar" />
                   <MenuItem fx:id="listarLivro" mnemonicParsing="false" onAction="#onListarLivrosClick" text="Listar Todos" />
                </items>
           </Menu>

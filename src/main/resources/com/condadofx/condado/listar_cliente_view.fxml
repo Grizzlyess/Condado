@@ -21,7 +21,7 @@
                   </Text>
                </center>
             </BorderPane>
-            <TableView prefHeight="541.0" prefWidth="800.0">
+            <TableView fx:id="tabelaClientes" prefHeight="541.0" prefWidth="800.0">
               <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="colNome" prefWidth="206.36436462402344" text="Nome" />
