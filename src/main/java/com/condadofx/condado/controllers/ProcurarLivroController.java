@@ -94,7 +94,7 @@ public class ProcurarLivroController implements Initializable {
         livro.setSinopse(sinopse.getText());
         try {
             livro.setQtd_estoque(Integer.parseInt(qtd_estoque.getText())); // Conversão para int
-            livro.setPreco_livro(Float.parseFloat(precoLivro.getText()));  // Conversão para float
+            livro.setPreco_livro(Float.parseFloat(precoLivro.getText().replace(",",".")));  // Conversão para float
         } catch (NumberFormatException e) {
             Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Erro nos valores!","Digite números válidos para quantidade e preço!");
             return;
