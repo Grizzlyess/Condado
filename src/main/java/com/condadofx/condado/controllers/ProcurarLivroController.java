@@ -56,17 +56,17 @@ public class ProcurarLivroController implements Initializable {
     public void onBuscarClick(){
 
         if(isbn.getValue()!=null) {
-            String isbnSelecionado = (String) isbn.getValue();
-            livro = DaoFactory.createLivroDao().procurarPorISBN(isbnSelecionado);
+
+            livro = DaoFactory.createLivroDao().procurarPorISBN(isbn.getValue());
 
             if (livro != null) {
                 titulo.setText(livro.getTitulo());
                 genero.setText(livro.getGenero());
                 sinopse.setText(livro.getSinopse());
+                editora.setText(livro.getEditora());
                 autor.setText(livro.getAutor());
                 qtd_estoque.setText(livro.getQtd_estoque() + "");
                 precoLivro.setText(String.format("%.2f", livro.getPreco_livro()));
-
 
                 if (livro.getFoto() != null) {
                     javafx.scene.image.Image image = new Image(new ByteArrayInputStream(livro.getFoto()));
@@ -155,7 +155,7 @@ public class ProcurarLivroController implements Initializable {
         // Cria uma lista de ISBNs dos livros
         List<String> isbns = new ArrayList<>();
         for (Livro livro : listaLivros) {
-            isbns.add(livro.getIsbn());  // Adiciona apenas os ISBNs dos livros
+            isbns.add(livro.getIsbn());
         }
 
         // Converte a lista para ObservableList e adiciona à ComboBox

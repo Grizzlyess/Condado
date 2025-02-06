@@ -280,6 +280,7 @@ public class LivroDaoJDBC implements LivroDao {
                 book.setSinopse(rs.getString("sinopse"));
                 book.setEditora(rs.getString("editora"));
                 book.setFoto(rs.getBytes("foto"));
+                books.add(book);
             }
             return books;
         } catch (SQLException e) {
