@@ -33,15 +33,10 @@ public class ListarPedidoController implements Initializable {
     @FXML
     private TableColumn<Pedido, String> colFkIdCliente;
 
-    private ObservableList<Pedido> pedidosList = FXCollections.observableArrayList();
-
-
     private void carregarPedidos() {
-        // Criar uma instância do DAO para acessar os dados
-        PedidoDao pedidoDao = DaoFactory.createPedidoDao();
-
+        ObservableList<Pedido> pedidosList = FXCollections.observableArrayList();
         // Buscar a lista de pedidos do banco de dados
-        List<Pedido> pedidos = pedidoDao.procurarTodos();
+        List<Pedido> pedidos = DaoFactory.createPedidoDao().procurarTodos();
 
         // Adicionar os pedidos na ObservableList
         pedidosList.clear();

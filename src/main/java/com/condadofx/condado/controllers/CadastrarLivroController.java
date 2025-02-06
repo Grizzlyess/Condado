@@ -1,8 +1,10 @@
 package com.condadofx.condado.controllers;
 import com.condadofx.condado.model.entities.Livro;
 import com.condadofx.condado.model.dao.DaoFactory;
+import com.condadofx.condado.util.Alerta;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -71,7 +73,7 @@ public class CadastrarLivroController implements Initializable {
         DaoFactory.createLivroDao().inserir(livro);
 
         // Exibindo uma mensagem de sucesso
-        //Alertas.mostrarAlerta(null, null, "Livro cadastrado com sucesso!", Alert.AlertType.INFORMATION);
+        Alerta.mostrarAlerta(Alert.AlertType.INFORMATION,"Livro Cadastrado!","Livro cadastrado com sucesso!");
     }
 
     @Override
