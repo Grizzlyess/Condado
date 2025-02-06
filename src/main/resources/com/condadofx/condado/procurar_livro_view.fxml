@@ -16,7 +16,7 @@
       <TextField fx:id="qtd_estoque" layoutX="264.0" layoutY="272.0" promptText="qtd estoque" />
       <TextField fx:id="titulo" layoutX="264.0" layoutY="218.0" promptText="título" />
       <TextField fx:id="genero" layoutX="264.0" layoutY="173.0" promptText="gênero" />
-      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="47.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="deletar" layoutX="407.0" layoutY="500.0" mnemonicParsing="false" onAction="#onDeletarClick" text="Deletar" />
       <Button fx:id="atualizar" layoutX="292.0" layoutY="500.0" mnemonicParsing="false" onAction="#onAtualizarClick" text="Atualizar" />
       <Button fx:id="buscar" layoutX="184.0" layoutY="500.0" mnemonicParsing="false" onAction="#onBuscarClick" text="Buscar" />

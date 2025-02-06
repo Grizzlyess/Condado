@@ -42,17 +42,7 @@ public class LivroDaoJDBC implements LivroDao {
             PreparedStatement st = null;
             try {
                 st = conn.prepareStatement(
-                        "UPDATE livro " +
-                                "SET autor = ?, " +
-                                "genero = ?, " +
-                                "titulo = ? " +  // Adicionado espaço antes do WHERE
-                                "qtd_estoque = ? " +
-                                "preco_livro = ?, " +
-                                "sinopse = ?, " +
-                                "editora = ?, " +
-                                "foto = ?, " +
-                                "WHERE isbn = ?");
-
+                        "UPDATE livro SET autor = ?, genero = ?, titulo = ?, qtd_estoque = ?, preco_livro = ?, sinopse = ?, editora = ?, foto = ? WHERE isbn = ?");
                 st.setString(1, book.getAutor());
                 st.setString(2, book.getGenero());
                 st.setString(3, book.getTitulo());
