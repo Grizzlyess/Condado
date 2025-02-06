@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.CadastrarCliente">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
    <children>
       <TextField layoutX="319.0" layoutY="75.0" promptText="autor" />
       <TextField layoutX="320.0" layoutY="300.0" promptText="preço" />

@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.ListarTodosPedido">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarPedidoController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -24,11 +23,11 @@
             </BorderPane>
             <TableView prefHeight="541.0" prefWidth="800.0">
               <columns>
-                  <TableColumn prefWidth="118.18222391605377" text="ID Pedido" />
-                  <TableColumn prefWidth="116.36407470703125" text="ID Cliente" />
-                <TableColumn prefWidth="189.09153747558594" text="Data do peddo" />
-                <TableColumn prefWidth="202.72802734375" text="Forma de pagamento" />
-                  <TableColumn prefWidth="170.90972970822156" text="Preço" />
+                  <TableColumn fx:id="colIdPedido" prefWidth="118.18222391605377" text="ID Pedido" />
+                  <TableColumn fx:id="colIdCliente" prefWidth="116.36407470703125" text="ID Cliente" />
+                <TableColumn fx:id="colDataPedido" prefWidth="189.09153747558594" text="Data do peddo" />
+                <TableColumn fx:id="colFormaPagamento" prefWidth="202.72802734375" text="Forma de pagamento" />
+                  <TableColumn fx:id="colPrecoPedido" prefWidth="170.90972970822156" text="Preço" />
               </columns>
             </TableView>
          </children>

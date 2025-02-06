@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.ListarTodosClientes">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarClienteController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -24,11 +23,11 @@
             </BorderPane>
             <TableView prefHeight="541.0" prefWidth="800.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="ID" />
-                <TableColumn prefWidth="206.36436462402344" text="Nome" />
-                  <TableColumn prefWidth="138.182373046875" text="Data Nascimento" />
-                  <TableColumn prefWidth="163.63702392578125" text="Email" />
-                  <TableColumn prefWidth="219.0916748046875" text="Contato" />
+                <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colNome" prefWidth="206.36436462402344" text="Nome" />
+                  <TableColumn fx:id="colDataNascimento" prefWidth="138.182373046875" text="Data de nascimento" />
+                  <TableColumn fx:id="colEmail" prefWidth="163.63702392578125" text="Email" />
+                  <TableColumn fx:id="colContato" prefWidth="219.0916748046875" text="Contato" />
               </columns>
             </TableView>
          </children>

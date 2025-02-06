@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.CadastrarPedido">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarPedidoController">
    <children>
       <TextField layoutX="202.0" layoutY="254.0" promptText="preço" />
       <TextField layoutX="237.0" layoutY="206.0" promptText="forma de pagamento" />

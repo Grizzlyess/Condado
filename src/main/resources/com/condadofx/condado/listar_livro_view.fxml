@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarLivrosController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <BorderPane prefHeight="60.0" prefWidth="800.0">
+               <center>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Livros" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </center>
+            </BorderPane>
+            <TableView prefHeight="541.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="colISBN" prefWidth="119.09128153324127" text="ISBN" />
+                <TableColumn fx:id="colTitulo" prefWidth="71.8184814453125" text="Título" />
+                  <TableColumn fx:id="colAutor" prefWidth="74.54570007324219" text="Autor" />
+                  <TableColumn fx:id="colGenero" prefWidth="75.45477294921875" text="Gênero" />
+                  <TableColumn fx:id="colEditora" prefWidth="61.81842041015625" text="Editora" />
+                  <TableColumn fx:id="colQtdEstoque" prefWidth="88.18212890625" text="Qtd Estoque" />
+                  <TableColumn fx:id="colPreco" prefWidth="77.27313232421875" text="Preço" />
+                  <TableColumn fx:id="colSinopse" prefWidth="110.9095458984375" text="Sinopse" />
+                  <TableColumn fx:id="colCapa" minWidth="0.9091796875" prefWidth="119.09130859375" text="Capa" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

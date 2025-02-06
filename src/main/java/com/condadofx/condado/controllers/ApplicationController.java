@@ -48,19 +48,18 @@ public class ApplicationController {
     @FXML
     void onCadastrarClienteClick() {
         try {
-            // Carregar o arquivo FXML para a tela de cadastro de cliente
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("cadastrar_cliente_view.fxml"));
-            Parent root = loader.load();
-
-            // Criar a nova cena e o novo estágio (janela)
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Cadastrar Cliente");
-
-            // Exibir a nova janela
-            stage.show();
+            stage = com.condadofx.condado.Application.newStage("cadastrar_cliente_view.fxml");
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void onCadastrarPedidoClick() {
+        try {
+            stage = com.condadofx.condado.Application.newStage("cadastrar_pedido_view.fxml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -77,14 +76,9 @@ public class ApplicationController {
     @FXML
     void onListarLivrosClick() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("listar_livros.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Lista de Livros");
-            stage.show();
+            stage = com.condadofx.condado.Application.newStage("listar_livro_view.fxml");
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
