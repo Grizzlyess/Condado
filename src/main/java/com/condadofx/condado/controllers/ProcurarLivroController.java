@@ -120,6 +120,13 @@ public class ProcurarLivroController implements Initializable {
         atualizar.setVisible(false);
         deletar.setVisible(false);
         isbn.getItems().remove(livro.getIsbn());
+        titulo.setText(null);
+        genero.setText(null);
+        sinopse.setText(null);
+        autor.setText(null);
+        qtd_estoque.setText(null);
+        precoLivro.setText(null);
+        editora.setText(null);
     }
 
     File file;
@@ -135,6 +142,7 @@ public class ProcurarLivroController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Inicialmente, esconde os botões "Atualizar" e "Deletar"
+
         atualizar.setVisible(false);
         deletar.setVisible(false);
 

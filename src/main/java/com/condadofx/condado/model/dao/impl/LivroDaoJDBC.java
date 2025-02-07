@@ -29,6 +29,8 @@ public class LivroDaoJDBC implements LivroDao {
             st.setString(7, book.getSinopse());
             st.setString(8, book.getEditora());
             st.setBytes(9, book.getFoto());
+
+            st.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }finally {

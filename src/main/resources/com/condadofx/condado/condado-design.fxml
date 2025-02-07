@@ -18,7 +18,7 @@
                <center>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UncialAntiqua-Regular.ttf;" text="Condado" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Liberation Serif Bold" size="28.0" />
+                        <Font name="Uncial Antiqua" size="28.0" />
                      </font>
                   </Text>
                </center>
