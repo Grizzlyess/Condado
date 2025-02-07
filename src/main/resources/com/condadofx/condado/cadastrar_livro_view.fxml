@@ -8,16 +8,16 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
    <children>
-      <TextField layoutX="319.0" layoutY="75.0" promptText="autor" />
-      <TextField layoutX="320.0" layoutY="300.0" promptText="preço" />
-      <TextField layoutX="319.0" layoutY="27.0" promptText="isbn" />
-      <TextField layoutX="319.0" layoutY="247.0" promptText="qtdEstoque" />
-      <TextField layoutX="319.0" layoutY="129.0" promptText="gênero" />
-      <TextField layoutX="319.0" layoutY="190.0" promptText="título" />
-      <TextField layoutX="320.0" layoutY="420.0" promptText="editora" />
-      <TextField layoutX="320.0" layoutY="366.0" promptText="sinopse" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="369.0" layoutY="500.0" mnemonicParsing="false" text="Salvar" />
+      <TextField fx:id="autor" layoutX="319.0" layoutY="75.0" promptText="autor" />
+      <TextField fx:id="precoLivro" layoutX="320.0" layoutY="300.0" promptText="preço" />
+      <TextField fx:id="isbn" layoutX="319.0" layoutY="27.0" promptText="isbn" />
+      <TextField fx:id="qtdEstoque" layoutX="319.0" layoutY="247.0" promptText="qtdEstoque" />
+      <TextField fx:id="genero" layoutX="319.0" layoutY="129.0" promptText="gênero" />
+      <TextField fx:id="titulo" layoutX="319.0" layoutY="190.0" promptText="título" />
+      <TextField fx:id="editora" layoutX="320.0" layoutY="420.0" promptText="editora" />
+      <TextField fx:id="sinopse" layoutX="320.0" layoutY="366.0" promptText="sinopse" />
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="salvar" layoutX="369.0" layoutY="500.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar" />
       <Label layoutX="262.0" layoutY="31.0" text="ISBN:" />
       <Label layoutX="262.0" layoutY="133.0" text="Gênero:" />
       <Label layoutX="267.0" layoutY="194.0" text="Título:" />

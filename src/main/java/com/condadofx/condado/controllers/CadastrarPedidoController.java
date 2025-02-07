@@ -5,6 +5,7 @@ import com.condadofx.condado.model.entities.Pedido;
 import com.condadofx.condado.util.Alerta;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
@@ -19,6 +20,8 @@ public class CadastrarPedidoController {
     private TextField formaPag;
     @FXML
     private TextField valorPag;
+    @FXML
+    private Button salvar;
 
     @FXML
     void onSalvarClick() {

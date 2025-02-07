@@ -4,6 +4,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -19,30 +20,35 @@
             </Text>
          </center>
       </BorderPane>
-      <MenuBar prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #AEE5A2;">
-        <menus>
-          <Menu mnemonicParsing="false" text="Cliente">
-            <items>
-              <MenuItem fx:id="cadastrarCliente" mnemonicParsing="false" onAction="#onCadastrarClienteClick" text="Cadastrar" />
-                  <MenuItem fx:id="procurarCliente" mnemonicParsing="false" onAction="#onProcurarClienteClick" text="Procurar" />
-                  <MenuItem fx:id="listarCliente" mnemonicParsing="false" onAction="#onListarClienteClick" text="Listar Todos" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Pedido">
-               <items>
-                  <MenuItem fx:id="cadastrarPedido" mnemonicParsing="false" onAction="#onCadastrarPedidoClick" text="Cadastrar" />
-                  <MenuItem fx:id="procurarPedido" mnemonicParsing="false" onAction="#onProcurarPedidoClick" text="Procurar" />
-                  <MenuItem fx:id="listarPedido" mnemonicParsing="false" onAction="#onListarPedidoClick" text="Listar Todos" />
-               </items></Menu>
-          <Menu mnemonicParsing="false" text="Livro">
-               <items>
-                  <MenuItem fx:id="cadastrarLivro" mnemonicParsing="false" onAction="#onCadastrarLivroClick" text="Cadastrar" />
-                  <MenuItem fx:id="procurarLivro" mnemonicParsing="false" onAction="#onProcurarLivroClick" text="Procurar" />
-                  <MenuItem fx:id="listarLivro" mnemonicParsing="false" onAction="#onListarLivrosClick" text="Listar Todos" />
-               </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <Pane prefHeight="402.0" prefWidth="600.0">
+         <children>
+            <MenuBar layoutX="22.0" layoutY="27.0" prefHeight="300.0" prefWidth="550.0" style="-fx-background-color: #AEE5A2;">
+              <menus>
+                <Menu mnemonicParsing="false" text="Cliente">
+                  <items>
+                    <MenuItem fx:id="cadastrarCliente" mnemonicParsing="false" onAction="#onCadastrarClienteClick" text="Cadastrar" />
+                        <MenuItem fx:id="procurarCliente" mnemonicParsing="false" onAction="#onProcurarClienteClick" text="Procurar" />
+                        <MenuItem fx:id="listarCliente" mnemonicParsing="false" onAction="#onListarClienteClick" text="Listar Todos" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pedido">
+                     <items>
+                        <MenuItem fx:id="cadastrarPedido" mnemonicParsing="false" onAction="#onCadastrarPedidoClick" text="Cadastrar" />
+                        <MenuItem fx:id="procurarPedido" mnemonicParsing="false" onAction="#onProcurarPedidoClick" text="Procurar" />
+                        <MenuItem fx:id="listarPedido" mnemonicParsing="false" onAction="#onListarPedidoClick" text="Listar Todos" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Livro">
+                     <items>
+                        <MenuItem fx:id="cadastrarLivro" mnemonicParsing="false" onAction="#onCadastrarLivroClick" text="Cadastrar" />
+                        <MenuItem fx:id="procurarLivro" mnemonicParsing="false" onAction="#onProcurarLivroClick" text="Procurar" />
+                        <MenuItem fx:id="listarLivro" mnemonicParsing="false" onAction="#onListarLivrosClick" text="Listar Todos" />
+                     </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
       <BorderPane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #30402D;">
          <center>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui." BorderPane.alignment="CENTER" />
