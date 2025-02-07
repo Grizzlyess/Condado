@@ -10,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ApplicationController">
+<AnchorPane stylesheets="@styles/telaPrincipal.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ApplicationController">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0">
          <children>
@@ -24,9 +23,9 @@
                   </Text>
                </center>
             </BorderPane>
-            <Pane prefHeight="402.0" prefWidth="600.0">
+            <Pane prefHeight="402.0" prefWidth="600.0" styleClass="telaPrincipal_container">
                <children>
-                  <MenuBar layoutX="25.0" layoutY="27.0" prefHeight="300.0" prefWidth="550.0" style="-fx-background-color: #AEE5A2;">
+                  <MenuBar layoutX="25.0" layoutY="27.0" prefHeight="300.0" prefWidth="550.0" styleClass="telaPrincipal_menu_container">
                     <menus>
                       <Menu mnemonicParsing="false" text="Cliente">
                         <items>
