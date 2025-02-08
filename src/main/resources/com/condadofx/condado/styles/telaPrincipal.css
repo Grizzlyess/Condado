@@ -1,11 +1,11 @@
 .telaPrincipal_container {
-    -fx-background-color: #C1FFB4;
+    -fx-background-color: #E8E773;
 }
 
 .telaPrincipal_menubar_container {
     -fx-background-color: #AEE5A2;
-    -fx-background-radius: 10px;
 }
 .telaPrincipal_menu_container {
+    -fx-background-color: #E8E773;
     -fx-font-size: 15px;
 }

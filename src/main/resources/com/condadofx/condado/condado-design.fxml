@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -12,13 +13,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane stylesheets="@styles/telaPrincipal.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ApplicationController">
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ApplicationController">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0">
          <children>
-            <BorderPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #30402D;">
+            <BorderPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #004101;">
                <center>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UncialAntiqua-Regular.ttf;" text="Condado" BorderPane.alignment="CENTER">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UncialAntiqua-Regular;" text="Condado" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="Uncial Antiqua" size="28.0" />
                      </font>
@@ -27,12 +28,12 @@
             </BorderPane>
             <Pane prefHeight="299.0" prefWidth="600.0" styleClass="telaPrincipal_container">
                <children>
-                  <ImageView fitHeight="354.0" fitWidth="600.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="255.0" fitWidth="600.0" layoutY="57.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/entrada.gif" />
                      </image>
                   </ImageView>
-                  <MenuBar layoutX="194.0" layoutY="14.0" prefHeight="32.0" prefWidth="212.0" style="-fx-background-color: #C1FFB4;" styleClass="telaPrincipal_menu_container">
+                  <MenuBar layoutX="191.0" layoutY="14.0" prefHeight="32.0" prefWidth="219.0" styleClass="telaPrincipal_menu_container">
                     <menus>
                       <Menu mnemonicParsing="false" text="Cliente">
                         <items>
@@ -59,15 +60,18 @@
                   </MenuBar>
                </children>
             </Pane>
-            <BorderPane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #30402D;">
+            <BorderPane prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #004101;">
                <center>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui..." wrappingWidth="329.4921875" BorderPane.alignment="CENTER">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui..." wrappingWidth="257.67376697063446" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Uncial Antiqua" size="18.0" />
+                        <Font size="17.0" />
                      </font></Text>
                </center>
             </BorderPane>
          </children>
       </VBox>
    </children>
+   <stylesheets>
+      <URL value="@styles/telaPrincipal.css" />
+   </stylesheets>
 </AnchorPane>

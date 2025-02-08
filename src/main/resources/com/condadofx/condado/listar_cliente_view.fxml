@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarClienteController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarClienteController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="800.0">
+      <VBox prefHeight="800.0" prefWidth="1000.0">
          <children>
-            <BorderPane prefHeight="60.0" prefWidth="800.0">
+            <BorderPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: #607F5A;">
                <center>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes" BorderPane.alignment="CENTER">
                      <font>
@@ -21,13 +21,13 @@
                   </Text>
                </center>
             </BorderPane>
-            <TableView fx:id="tabelaClientes" prefHeight="541.0" prefWidth="800.0">
+            <TableView fx:id="tabelaClientes" prefHeight="740.0" prefWidth="1000.0">
               <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-                <TableColumn fx:id="colNome" prefWidth="206.36436462402344" text="Nome" />
-                  <TableColumn fx:id="colDataNascimento" prefWidth="138.182373046875" text="Data de nascimento" />
-                  <TableColumn fx:id="colEmail" prefWidth="163.63702392578125" text="Email" />
-                  <TableColumn fx:id="colContato" prefWidth="219.0916748046875" text="Contato" />
+                <TableColumn fx:id="colNome" prefWidth="290.0010223388672" text="Nome" />
+                  <TableColumn fx:id="colDataNascimento" prefWidth="177.2734375" text="Data de nascimento" />
+                  <TableColumn fx:id="colEmail" prefWidth="213.63714599609375" text="Email" />
+                  <TableColumn fx:id="colContato" prefWidth="243.63720703125" text="Contato" />
               </columns>
             </TableView>
          </children>

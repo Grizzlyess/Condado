@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarLivrosController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarLivrosController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="800.0">
+      <VBox prefHeight="800.0" prefWidth="1000.0">
          <children>
             <BorderPane prefHeight="60.0" prefWidth="800.0">
                <center>
@@ -21,17 +21,17 @@
                   </Text>
                </center>
             </BorderPane>
-            <TableView fx:id="tabelaLivros" prefHeight="541.0" prefWidth="800.0">
+            <TableView fx:id="tabelaLivros" prefHeight="740.0" prefWidth="800.0">
               <columns>
                 <TableColumn fx:id="colISBN" prefWidth="119.09128153324127" text="ISBN" />
                 <TableColumn fx:id="colTitulo" prefWidth="71.8184814453125" text="Título" />
-                  <TableColumn fx:id="colAutor" prefWidth="74.54570007324219" text="Autor" />
-                  <TableColumn fx:id="colGenero" prefWidth="75.45477294921875" text="Gênero" />
-                  <TableColumn fx:id="colEditora" prefWidth="61.81842041015625" text="Editora" />
-                  <TableColumn fx:id="colQtdEstoque" prefWidth="88.18212890625" text="Qtd Estoque" />
-                  <TableColumn fx:id="colPreco" prefWidth="77.27313232421875" text="Preço" />
-                  <TableColumn fx:id="colSinopse" prefWidth="110.9095458984375" text="Sinopse" />
-                  <TableColumn fx:id="colCapa" minWidth="0.9091796875" prefWidth="119.09130859375" text="Capa" />
+                  <TableColumn fx:id="colAutor" prefWidth="83.63664245605469" text="Autor" />
+                  <TableColumn fx:id="colGenero" prefWidth="83.63665771484375" text="Gênero" />
+                  <TableColumn fx:id="colEditora" prefWidth="81.8184814453125" text="Editora" />
+                  <TableColumn fx:id="colQtdEstoque" prefWidth="83.63671875" text="Qtd Estoque" />
+                  <TableColumn fx:id="colPreco" prefWidth="109.09130859375" text="Preço" />
+                  <TableColumn fx:id="colSinopse" prefWidth="184.54620361328125" text="Sinopse" />
+                  <TableColumn fx:id="colCapa" minWidth="0.9091796875" prefWidth="182.7279052734375" text="Capa" />
               </columns>
             </TableView>
          </children>
