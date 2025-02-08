@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -14,7 +16,7 @@
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0">
          <children>
-            <BorderPane prefHeight="105.0" prefWidth="600.0" style="-fx-background-color: #607F5A;">
+            <BorderPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #30402D;">
                <center>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UncialAntiqua-Regular.ttf;" text="Condado" BorderPane.alignment="CENTER">
                      <font>
@@ -23,9 +25,14 @@
                   </Text>
                </center>
             </BorderPane>
-            <Pane prefHeight="402.0" prefWidth="600.0" styleClass="telaPrincipal_container">
+            <Pane prefHeight="299.0" prefWidth="600.0" styleClass="telaPrincipal_container">
                <children>
-                  <MenuBar layoutX="25.0" layoutY="27.0" prefHeight="300.0" prefWidth="550.0" styleClass="telaPrincipal_menu_container">
+                  <ImageView fitHeight="354.0" fitWidth="600.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/entrada.gif" />
+                     </image>
+                  </ImageView>
+                  <MenuBar layoutX="194.0" layoutY="14.0" prefHeight="32.0" prefWidth="212.0" style="-fx-background-color: #C1FFB4;" styleClass="telaPrincipal_menu_container">
                     <menus>
                       <Menu mnemonicParsing="false" text="Cliente">
                         <items>
@@ -54,7 +61,10 @@
             </Pane>
             <BorderPane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #30402D;">
                <center>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui." BorderPane.alignment="CENTER" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui..." wrappingWidth="329.4921875" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Uncial Antiqua" size="18.0" />
+                     </font></Text>
                </center>
             </BorderPane>
          </children>
