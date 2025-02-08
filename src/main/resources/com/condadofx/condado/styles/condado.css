@@ -1,0 +1,14 @@
+.condado_container {
+    -fx-background-color: #E8E773;
+}
+
+.condado_border_container {
+    -fx-background-color: #004101;
+}
+.condado_menu_container {
+    -fx-background-color: #E8E773;
+    -fx-font-size: 15px;
+}
+.condado_text_container {
+    -fx-fill: #ffffff;
+}

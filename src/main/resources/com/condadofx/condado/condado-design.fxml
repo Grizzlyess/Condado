@@ -17,7 +17,7 @@
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0">
          <children>
-            <BorderPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #004101;">
+            <BorderPane prefHeight="69.0" prefWidth="600.0" styleClass="condado_border_container">
                <center>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UncialAntiqua-Regular;" text="Condado" BorderPane.alignment="CENTER">
                      <font>
@@ -26,14 +26,14 @@
                   </Text>
                </center>
             </BorderPane>
-            <Pane prefHeight="299.0" prefWidth="600.0" styleClass="telaPrincipal_container">
+            <Pane prefHeight="299.0" prefWidth="600.0" styleClass="condado_container">
                <children>
                   <ImageView fitHeight="255.0" fitWidth="600.0" layoutY="57.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/entrada.gif" />
                      </image>
                   </ImageView>
-                  <MenuBar layoutX="191.0" layoutY="14.0" prefHeight="32.0" prefWidth="219.0" styleClass="telaPrincipal_menu_container">
+                  <MenuBar layoutX="191.0" layoutY="14.0" prefHeight="32.0" prefWidth="219.0" styleClass="condado_menu_container">
                     <menus>
                       <Menu mnemonicParsing="false" text="Cliente">
                         <items>
@@ -60,7 +60,7 @@
                   </MenuBar>
                </children>
             </Pane>
-            <BorderPane prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #004101;">
+            <BorderPane prefHeight="85.0" prefWidth="600.0" styleClass="condado_border_container">
                <center>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui..." wrappingWidth="257.67376697063446" BorderPane.alignment="CENTER">
                      <font>
@@ -72,6 +72,6 @@
       </VBox>
    </children>
    <stylesheets>
-      <URL value="@styles/telaPrincipal.css" />
+      <URL value="@styles/condado.css" />
    </stylesheets>
 </AnchorPane>

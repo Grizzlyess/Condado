@@ -6,90 +6,85 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
    <children>
+      <BorderPane prefHeight="50.0" prefWidth="800.0">
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Livro" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
       <ImageView fitHeight="600.0" fitWidth="800.0" opacity="0.25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@img/gandalf.gif" />
          </image>
       </ImageView>
-      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="60.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0016483453961" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="605.0029303918153" AnchorPane.topAnchor="60.0">
          <image>
             <Image url="@img/OIP.jpg" />
          </image>
       </ImageView>
-      <GridPane layoutX="339.0" prefHeight="180.0" prefWidth="361.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <FlowPane layoutX="257.0" layoutY="60.0" prefHeight="291.0" prefWidth="285.0">
          <children>
-            <Label text="ISBN:">
+            <Label prefHeight="30.0" text="ISBN:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="isbn" promptText="isbn" GridPane.columnIndex="1" />
-            <Label text="Autor:" GridPane.rowIndex="1">
+            <TextField fx:id="isbn" prefWidth="285.0" promptText="isbn" />
+            <Label prefHeight="30.0" text="Autor:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="autor" promptText="autor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Gênero:" GridPane.rowIndex="2">
+            <TextField fx:id="autor" prefWidth="285.0" promptText="autor" />
+            <Label prefHeight="30.0" text="Gênero:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="genero" promptText="gênero" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label text="Título:" GridPane.rowIndex="3">
+            <TextField fx:id="genero" prefWidth="285.0" promptText="gênero" />
+            <Label prefHeight="30.0" text="Título:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="titulo" promptText="título" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="QtdEstoque:" GridPane.rowIndex="4">
+            <TextField fx:id="titulo" prefWidth="285.0" promptText="título" />
+            <Label prefHeight="30.0" text="QtdEstoque:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="qtdEstoque" promptText="qtdEstoque" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label text="Preço:" GridPane.rowIndex="5">
+            <TextField fx:id="qtdEstoque" prefWidth="285.0" promptText="qtdEstoque" />
+            <Label prefHeight="30.0" text="Preço:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="precoLivro" promptText="preço" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label text="Sinopse:" GridPane.rowIndex="6">
+            <TextField fx:id="precoLivro" prefWidth="285.0" promptText="preço" />
+            <Label prefHeight="30.0" text="Sinopse:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="sinopse" promptText="sinopse" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label text="Editora:" GridPane.rowIndex="7">
+            <TextField fx:id="sinopse" prefWidth="285.0" promptText="sinopse" />
+            <Label prefHeight="30.0" text="Editora:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="editora" promptText="editora" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="editora" prefWidth="285.0" promptText="editora" />
          </children>
-      </GridPane>
-      <Button fx:id="salvar" layoutX="520.0" layoutY="224.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
+      </FlowPane>
+      <Button fx:id="salvar" layoutX="364.0" layoutY="531.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>

@@ -5,17 +5,39 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarPedidoController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarPedidoController">
    <children>
-      <TextField fx:id="valorPag" layoutX="202.0" layoutY="254.0" promptText="preço" />
-      <TextField fx:id="formaPag" layoutX="237.0" layoutY="206.0" promptText="forma de pagamento" />
-      <DatePicker fx:id="dataPedido" layoutX="196.0" layoutY="153.0" promptText="data do pedido" />
-      <Button fx:id="salvar" layoutX="313.0" layoutY="388.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar" />
-      <Label layoutX="156.0" layoutY="211.0" text="Pagamento:" />
-      <Label layoutX="156.0" layoutY="259.0" text="Preço:" />
-      <Label layoutX="156.0" layoutY="158.0" text="Data:" />
-      <TextField fx:id="idClient" layoutX="222.0" layoutY="92.0" promptText="id cliente" />
-      <Label layoutX="144.0" layoutY="96.0" text="ID cliente:" />
+      <Pane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <BorderPane prefHeight="50.0" prefWidth="800.0" styleClass="condado_border_container">
+               <center>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Casdastar Pedido" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </center>
+            </BorderPane>
+            <FlowPane layoutX="257.0" layoutY="70.0" prefHeight="200.0" prefWidth="285.0">
+               <children>
+                  <Label prefHeight="30.0" text="ID cliente:" />
+                  <TextField fx:id="idClient" prefWidth="285.0" promptText="id cliente" />
+                  <Label prefHeight="30.0" text="Data:" />
+                  <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
+                  <Label prefHeight="30.0" text="Pagamento:" />
+                  <TextField fx:id="formaPag" prefWidth="285.0" promptText="forma de pagamento" />
+                  <Label prefHeight="30.0" text="Preço:" />
+                  <TextField fx:id="valorPag" prefWidth="285.0" promptText="preço" />
+               </children>
+            </FlowPane>
+            <Button fx:id="salvar" layoutX="372.0" layoutY="331.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
