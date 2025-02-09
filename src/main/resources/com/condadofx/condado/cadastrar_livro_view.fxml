@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
    <children>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
@@ -36,49 +36,49 @@
          <children>
             <Label prefHeight="30.0" text="ISBN:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="isbn" prefWidth="285.0" promptText="isbn" />
             <Label prefHeight="30.0" text="Autor:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="autor" prefWidth="285.0" promptText="autor" />
             <Label prefHeight="30.0" text="Gênero:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="genero" prefWidth="285.0" promptText="gênero" />
             <Label prefHeight="30.0" text="Título:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="titulo" prefWidth="285.0" promptText="título" />
             <Label prefHeight="30.0" text="QtdEstoque:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="qtdEstoque" prefWidth="285.0" promptText="qtdEstoque" />
             <Label prefHeight="30.0" text="Preço:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="precoLivro" prefWidth="285.0" promptText="preço" />
             <Label prefHeight="30.0" text="Sinopse:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="sinopse" prefWidth="285.0" promptText="sinopse" />
             <Label prefHeight="30.0" text="Editora:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="editora" prefWidth="285.0" promptText="editora" />

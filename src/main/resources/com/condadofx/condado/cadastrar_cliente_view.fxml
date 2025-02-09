@@ -6,8 +6,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -24,21 +24,21 @@
                   </Text>
                </center>
             </BorderPane>
-            <FlowPane layoutX="257.0" layoutY="67.0" prefHeight="291.0" prefWidth="285.0">
+            <VBox layoutX="257.0" layoutY="80.0" prefHeight="200.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
                <children>
-                  <Label prefHeight="30.0" text="ID:" />
+                  <Label text="ID:" />
                   <TextField fx:id="id" prefWidth="285.0" promptText="id do cliente" />
-                  <Label prefHeight="30.0" text="Nome:" />
+                  <Label text="Nome:" />
                   <TextField fx:id="nome" prefWidth="285.0" promptText="nome" />
-                  <Label prefHeight="30.0" text="Data de nascimento:" />
+                  <Label text="Data de nascimento:" />
                   <DatePicker fx:id="dataNascimento" prefWidth="285.0" promptText="data de nascimento" />
-                  <Label prefHeight="30.0" text="Email:" />
+                  <Label text="Email:" />
                   <TextField fx:id="email" prefWidth="285.0" promptText="email" />
-                  <Label prefHeight="30.0" text="Contato:" />
+                  <Label text="Contato:" />
                   <TextField fx:id="contato" prefWidth="285.0" promptText="contato" />
                </children>
-            </FlowPane>
-            <Button fx:id="salvar" layoutX="352.0" layoutY="380.0" mnemonicParsing="false" onAction="#onSalvarClick" prefHeight="25.0" prefWidth="97.0" text="Salvar" />
+            </VBox>
+            <Button fx:id="salvar" layoutX="351.0" layoutY="438.0" mnemonicParsing="false" onAction="#onSalvarClick" prefHeight="25.0" prefWidth="97.0" text="Salvar" />
          </children>
       </Pane>
    </children>

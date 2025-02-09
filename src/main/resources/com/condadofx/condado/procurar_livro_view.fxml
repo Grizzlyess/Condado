@@ -2,23 +2,59 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ProcurarLivroController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ProcurarLivroController">
    <children>
-      <ComboBox fx:id="isbn" layoutX="264.0" layoutY="65.0" prefWidth="150.0" promptText="isbn" />
-      <TextField fx:id="sinopse" layoutX="264.0" layoutY="388.0" promptText="sinopse" />
-      <TextField fx:id="autor" layoutX="264.0" layoutY="122.0" promptText="autor" />
-      <TextField fx:id="editora" layoutX="264.0" layoutY="430.0" promptText="editora" />
-      <TextField fx:id="precoLivro" layoutX="264.0" layoutY="334.0" promptText="preço" />
-      <TextField fx:id="qtd_estoque" layoutX="264.0" layoutY="272.0" promptText="qtd estoque" />
-      <TextField fx:id="titulo" layoutX="264.0" layoutY="218.0" promptText="título" />
-      <TextField fx:id="genero" layoutX="264.0" layoutY="173.0" promptText="gênero" />
-      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="47.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="deletar" layoutX="407.0" layoutY="500.0" mnemonicParsing="false" onAction="#onDeletarClick" text="Deletar" />
-      <Button fx:id="atualizar" layoutX="292.0" layoutY="500.0" mnemonicParsing="false" onAction="#onAtualizarClick" text="Atualizar" />
-      <Button fx:id="buscar" layoutX="184.0" layoutY="500.0" mnemonicParsing="false" onAction="#onBuscarClick" text="Buscar" />
+      <Pane prefHeight="700.0" prefWidth="800.0">
+         <children>
+            <BorderPane prefHeight="50.0" prefWidth="800.0" styleClass="condado_border_container">
+               <center>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Procurar Livro" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </center>
+            </BorderPane>
+            <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="80.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" />
+            <VBox layoutX="257.0" layoutY="80.0" prefHeight="269.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
+               <children>
+                  <Label text="ISBN:" />
+                  <ComboBox fx:id="isbn" prefWidth="287.0" promptText="isbn" />
+                  <Label text="Autor:" />
+                  <TextField fx:id="autor" promptText="autor" />
+                  <Label text="Gênero" />
+                  <TextField fx:id="genero" promptText="gênero" />
+                  <Label text="Título:" />
+                  <TextField fx:id="titulo" promptText="título" />
+                  <Label text="QTD Estoque:" />
+                  <TextField fx:id="qtd_estoque" promptText="qtd estoque" />
+                  <Label text="Preço:" />
+                  <TextField fx:id="precoLivro" promptText="preço" />
+                  <Label text="Sinopse" />
+                  <TextField fx:id="sinopse" promptText="sinopse" />
+                  <Label text="Editora:" />
+                  <TextField fx:id="editora" promptText="editora" />
+               </children>
+            </VBox>
+            <HBox layoutX="257.0" layoutY="617.0" prefWidth="287.0" spacing="45.0">
+               <children>
+                  <Button fx:id="atualizar" mnemonicParsing="false" onAction="#onAtualizarClick" text="Atualizar" />
+                  <Button fx:id="buscar" mnemonicParsing="false" onAction="#onBuscarClick" text="Buscar" />
+                  <Button fx:id="deletar" mnemonicParsing="false" onAction="#onDeletarClick" text="Deletar" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
