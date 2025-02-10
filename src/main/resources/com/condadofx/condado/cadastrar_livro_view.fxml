@@ -7,12 +7,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
+<AnchorPane prefHeight="650.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarLivroController">
    <children>
+      <ImageView fitHeight="650.0" fitWidth="800.0" opacity="0.25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@img/gandalf.gif" />
+         </image>
+      </ImageView>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Livro" BorderPane.alignment="CENTER">
@@ -22,69 +27,32 @@
             </Text>
          </center>
       </BorderPane>
-      <ImageView fitHeight="600.0" fitWidth="800.0" opacity="0.25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@img/gandalf.gif" />
-         </image>
-      </ImageView>
       <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="60.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0016483453961" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="605.0029303918153" AnchorPane.topAnchor="60.0">
          <image>
             <Image url="@img/OIP.jpg" />
          </image>
       </ImageView>
-      <FlowPane layoutX="257.0" layoutY="60.0" prefHeight="291.0" prefWidth="285.0">
+      <VBox layoutX="256.0" layoutY="60.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <Label prefHeight="30.0" text="ISBN:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="ISBN:" />
             <TextField fx:id="isbn" prefWidth="285.0" promptText="isbn" />
-            <Label prefHeight="30.0" text="Autor:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="Autor:" />
             <TextField fx:id="autor" prefWidth="285.0" promptText="autor" />
-            <Label prefHeight="30.0" text="Gênero:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="Gênero:" />
             <TextField fx:id="genero" prefWidth="285.0" promptText="gênero" />
-            <Label prefHeight="30.0" text="Título:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="Título:" />
             <TextField fx:id="titulo" prefWidth="285.0" promptText="título" />
-            <Label prefHeight="30.0" text="QtdEstoque:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="QtdEstoque:" />
             <TextField fx:id="qtdEstoque" prefWidth="285.0" promptText="qtdEstoque" />
-            <Label prefHeight="30.0" text="Preço:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="Preço:" />
             <TextField fx:id="precoLivro" prefWidth="285.0" promptText="preço" />
-            <Label prefHeight="30.0" text="Sinopse:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="Sinopse:" />
             <TextField fx:id="sinopse" prefWidth="285.0" promptText="sinopse" />
-            <Label prefHeight="30.0" text="Editora:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Label>
+            <Label text="Editora:" />
             <TextField fx:id="editora" prefWidth="285.0" promptText="editora" />
          </children>
-      </FlowPane>
-      <Button fx:id="salvar" layoutX="364.0" layoutY="531.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
+      </VBox>
+      <Button fx:id="salvar" layoutX="364.0" layoutY="558.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>

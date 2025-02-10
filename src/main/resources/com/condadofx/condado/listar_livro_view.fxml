@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #607F5A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarLivrosController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.ListarLivrosController">
    <children>
       <VBox prefHeight="800.0" prefWidth="1000.0">
          <children>
-            <BorderPane prefHeight="60.0" prefWidth="800.0">
+            <BorderPane prefHeight="60.0" prefWidth="800.0" styleClass="condado_border_container">
                <center>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Livros" BorderPane.alignment="CENTER">
                      <font>

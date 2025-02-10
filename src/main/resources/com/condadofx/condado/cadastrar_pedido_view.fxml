@@ -4,40 +4,42 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarPedidoController">
+<AnchorPane prefHeight="650.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarPedidoController">
    <children>
-      <Pane prefHeight="600.0" prefWidth="800.0">
+      <ImageView fitHeight="650.0" fitWidth="800.0" opacity="0.25" pickOnBounds="true">
+         <image>
+            <Image url="@img/pedido_cadastrar.gif" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="50.0" prefWidth="800.0">
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Casdastrar Pedido" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+      <VBox layoutX="256.0" layoutY="70.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <BorderPane prefHeight="50.0" prefWidth="800.0" styleClass="condado_border_container">
-               <center>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Casdastar Pedido" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-               </center>
-            </BorderPane>
-            <FlowPane layoutX="257.0" layoutY="70.0" prefHeight="200.0" prefWidth="285.0">
-               <children>
-                  <Label prefHeight="30.0" text="ID cliente:" />
-                  <TextField fx:id="idClient" prefWidth="285.0" promptText="id cliente" />
-                  <Label prefHeight="30.0" text="Data:" />
-                  <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
-                  <Label prefHeight="30.0" text="Pagamento:" />
-                  <TextField fx:id="formaPag" prefWidth="285.0" promptText="forma de pagamento" />
-                  <Label prefHeight="30.0" text="Preço:" />
-                  <TextField fx:id="valorPag" prefWidth="285.0" promptText="preço" />
-               </children>
-            </FlowPane>
-            <Button fx:id="salvar" layoutX="372.0" layoutY="331.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar" />
+            <Label text="ID cliente:" />
+            <TextField fx:id="idClient" prefWidth="285.0" promptText="id cliente" />
+            <Label text="Data:" />
+            <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
+            <Label text="Pagamento:" />
+            <TextField fx:id="formaPag" prefWidth="285.0" promptText="forma de pagamento" />
+            <Label text="Preço:" />
+            <TextField fx:id="valorPag" prefWidth="285.0" promptText="preço" />
          </children>
-      </Pane>
+      </VBox>
+      <Button fx:id="salvar" layoutX="372.0" layoutY="408.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar" />
    </children>
 </AnchorPane>
