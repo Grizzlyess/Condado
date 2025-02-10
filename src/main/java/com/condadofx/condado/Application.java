@@ -1,5 +1,6 @@
 package com.condadofx.condado;
 
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -16,6 +17,8 @@ public class Application extends javafx.application.Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+        stage.setOnCloseRequest(event -> {
+            Platform.exit();});
     }
 
     public static Scene getScene(){
@@ -31,8 +34,6 @@ public class Application extends javafx.application.Application {
         stage.setResizable(false);
         return stage;
     }
-
-
 
     public static void main(String[] args) {
         launch();

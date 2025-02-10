@@ -1,15 +1,18 @@
 package com.condadofx.condado.controllers;
 
+import com.condadofx.condado.util.FontApli;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
 import javafx.scene.control.MenuItem;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class ApplicationController {
+public class ApplicationController implements Initializable {
 
     @FXML
     private MenuItem cadastrarLivro;
@@ -31,7 +34,10 @@ public class ApplicationController {
     private MenuItem procurarPedido;
     @FXML
     private MenuItem listarPedido;
-
+    @FXML
+    private Text top;
+    @FXML
+    private Text bot;
 
     private static Stage stage;
 
@@ -120,10 +126,17 @@ public class ApplicationController {
         }
     }
 
-
-
-
     public static Stage getStage(){
         return stage;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Exemplo de uso da Classe com lista de Textos
+        FontApli Apli = new FontApli();
+        List<Text> txl = new ArrayList<>();
+        txl.add(top);
+        txl.add(bot);
+        Apli.AplicarFonteTx(txl);
     }
 }

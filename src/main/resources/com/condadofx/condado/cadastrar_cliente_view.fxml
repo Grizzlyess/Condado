@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarClienteController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@styles/condado.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.condadofx.condado.controllers.CadastrarClienteController">
    <children>
       <ImageView fitHeight="650.0" fitWidth="800.0" opacity="0.25" pickOnBounds="true">
          <image>
@@ -21,7 +21,7 @@
       </ImageView>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Cadastrar Cliente" BorderPane.alignment="CENTER">
+            <Text fx:id="titulo" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Cadastrar Cliente" BorderPane.alignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -30,15 +30,15 @@
       </BorderPane>
       <VBox layoutX="256.0" layoutY="80.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <Label text="ID:" />
+            <Label fx:id="lid" text="ID:" />
             <TextField fx:id="id" prefWidth="285.0" promptText="id do cliente" />
-            <Label text="Nome:" />
+            <Label fx:id="lnome" text="Nome:" />
             <TextField fx:id="nome" prefWidth="285.0" promptText="nome" />
-            <Label text="Data de nascimento:" />
+            <Label fx:id="ldata" text="Data de nascimento:" />
             <DatePicker fx:id="dataNascimento" prefWidth="285.0" promptText="data de nascimento" />
-            <Label text="Email:" />
+            <Label fx:id="lemail" text="Email:" />
             <TextField fx:id="email" prefWidth="285.0" promptText="email" />
-            <Label text="Contato:" />
+            <Label fx:id="lcontato" text="Contato:" />
             <TextField fx:id="contato" prefWidth="285.0" promptText="contato" />
          </children>
       </VBox>
