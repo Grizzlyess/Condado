@@ -14,7 +14,7 @@
          <children>
             <BorderPane prefHeight="60.0" prefWidth="800.0" styleClass="condado_border_container">
                <center>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Livros" BorderPane.alignment="CENTER">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="uncial_antiqua" text="Livros" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -31,7 +31,7 @@
                   <TableColumn fx:id="colQtdEstoque" prefWidth="83.63671875" text="Qtd Estoque" />
                   <TableColumn fx:id="colPreco" prefWidth="109.09130859375" text="Preço" />
                   <TableColumn fx:id="colSinopse" prefWidth="184.54620361328125" text="Sinopse" />
-                  <TableColumn fx:id="colCapa" minWidth="0.9091796875" prefWidth="182.7279052734375" text="Capa" />
+                  <TableColumn fx:id="colCapa" minWidth="-1.0" prefWidth="178.182373046875" text="Capa" />
               </columns>
             </TableView>
          </children>

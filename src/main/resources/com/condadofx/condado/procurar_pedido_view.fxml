@@ -22,7 +22,7 @@
       </ImageView>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Procurar Pedido" BorderPane.alignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="uncial_antiqua" text="Procurar Pedido" BorderPane.alignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -31,22 +31,22 @@
       </BorderPane>
       <VBox layoutX="256.0" layoutY="80.0" prefHeight="200.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <Label text="ID pedido:" />
+            <Label styleClass="uncial_antiqua" text="ID pedido:" />
             <ComboBox fx:id="id_Pedido" prefWidth="287.0" promptText="ID pedido" />
-            <Label text="Cliente:" />
+            <Label styleClass="uncial_antiqua" text="Cliente:" />
             <TextField fx:id="idCliente" prefWidth="285.0" promptText="cliente" />
-            <Label text="Data do pedido:" />
+            <Label styleClass="uncial_antiqua" text="Data do pedido:" />
             <TextField fx:id="dataPed" prefWidth="285.0" promptText="data do pedido" />
-            <Label text="Forma de pagamento:" />
+            <Label styleClass="uncial_antiqua" text="Forma de pagamento:" />
             <TextField fx:id="formaPag" prefWidth="285.0" promptText="forma de pagamento" />
-            <Label text="Valor do pagamento:" />
+            <Label styleClass="uncial_antiqua" text="Valor do pagamento:" />
             <TextField fx:id="valorPag" prefWidth="285.0" promptText="valor do pagamento" />
          </children>
       </VBox>
-      <HBox layoutX="318.0" layoutY="432.0" prefHeight="27.0" prefWidth="163.0" spacing="40.0">
+      <HBox layoutX="286.0" layoutY="410.0" prefHeight="27.0" prefWidth="226.0" spacing="40.0">
          <children>
-            <Button fx:id="buscar" mnemonicParsing="false" onAction="#onBuscarClick" text="Buscar" />
-            <Button fx:id="deletar" mnemonicParsing="false" onAction="#onDeletarClick" text="Deletar" />
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#onBuscarClick" styleClass="condado_button" text="Buscar" />
+            <Button fx:id="deletar" mnemonicParsing="false" onAction="#onDeletarClick" styleClass="condado_button" text="Deletar" />
          </children>
       </HBox>
    </children>

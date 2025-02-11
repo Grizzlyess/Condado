@@ -20,39 +20,39 @@
       </ImageView>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Livro" BorderPane.alignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="uncial_antiqua" text="Cadastrar Livro" BorderPane.alignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
          </center>
       </BorderPane>
-      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="60.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0016483453961" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="605.0029303918153" AnchorPane.topAnchor="60.0">
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="60.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="440.0018314948845" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="602.0029303918153" AnchorPane.topAnchor="60.0">
          <image>
             <Image url="@img/OIP.jpg" />
          </image>
       </ImageView>
       <VBox layoutX="256.0" layoutY="60.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <Label text="ISBN:" />
+            <Label styleClass="uncial_antiqua" text="ISBN:" />
             <TextField fx:id="isbn" prefWidth="285.0" promptText="isbn" />
-            <Label text="Autor:" />
+            <Label styleClass="uncial_antiqua" text="Autor:" />
             <TextField fx:id="autor" prefWidth="285.0" promptText="autor" />
-            <Label text="Gênero:" />
+            <Label styleClass="uncial_antiqua" text="Gênero:" />
             <TextField fx:id="genero" prefWidth="285.0" promptText="gênero" />
-            <Label text="Título:" />
+            <Label styleClass="uncial_antiqua" text="Título:" />
             <TextField fx:id="titulo" prefWidth="285.0" promptText="título" />
-            <Label text="QtdEstoque:" />
+            <Label styleClass="uncial_antiqua" text="QtdEstoque:" />
             <TextField fx:id="qtdEstoque" prefWidth="285.0" promptText="qtdEstoque" />
-            <Label text="Preço:" />
+            <Label styleClass="uncial_antiqua" text="Preço:" />
             <TextField fx:id="precoLivro" prefWidth="285.0" promptText="preço" />
-            <Label text="Sinopse:" />
+            <Label styleClass="uncial_antiqua" text="Sinopse:" />
             <TextField fx:id="sinopse" prefWidth="285.0" promptText="sinopse" />
-            <Label text="Editora:" />
+            <Label styleClass="uncial_antiqua" text="Editora:" />
             <TextField fx:id="editora" prefWidth="285.0" promptText="editora" />
          </children>
       </VBox>
-      <Button fx:id="salvar" layoutX="364.0" layoutY="558.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
+      <Button fx:id="salvar" layoutX="349.0" layoutY="590.0" mnemonicParsing="false" onAction="#onSalvarClick" styleClass="condado_button" text="Salvar">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>

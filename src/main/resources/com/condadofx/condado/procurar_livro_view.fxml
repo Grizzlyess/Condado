@@ -22,7 +22,7 @@
       </ImageView>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Procurar Livro" BorderPane.alignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="uncial_antiqua" text="Procurar Livro" BorderPane.alignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -30,7 +30,7 @@
          </center>
       </BorderPane>
       <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="75.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" />
-      <VBox layoutX="256.0" layoutY="75.0" prefHeight="269.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
+      <VBox layoutX="256.0" layoutY="60.0" prefHeight="269.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
             <Label text="ISBN:" />
             <ComboBox fx:id="isbn" prefWidth="287.0" promptText="isbn" />
@@ -50,11 +50,11 @@
             <TextField fx:id="editora" promptText="editora" />
          </children>
       </VBox>
-      <HBox layoutX="256.0" layoutY="590.0" prefWidth="287.0" spacing="45.0">
+      <HBox layoutX="201.0" layoutY="575.0" prefHeight="34.0" prefWidth="397.0" spacing="45.0">
          <children>
-            <Button fx:id="atualizar" mnemonicParsing="false" onAction="#onAtualizarClick" text="Atualizar" />
-            <Button fx:id="buscar" mnemonicParsing="false" onAction="#onBuscarClick" text="Buscar" />
-            <Button fx:id="deletar" mnemonicParsing="false" onAction="#onDeletarClick" text="Deletar" />
+            <Button fx:id="atualizar" mnemonicParsing="false" onAction="#onAtualizarClick" styleClass="condado_button" text="Atualizar" />
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#onBuscarClick" styleClass="condado_button" text="Buscar" />
+            <Button fx:id="deletar" mnemonicParsing="false" onAction="#onDeletarClick" styleClass="condado_button" text="Deletar" />
          </children>
       </HBox>
    </children>

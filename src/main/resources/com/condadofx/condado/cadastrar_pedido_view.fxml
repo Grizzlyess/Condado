@@ -21,25 +21,25 @@
       </ImageView>
       <BorderPane prefHeight="50.0" prefWidth="800.0">
          <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="condado_text_container" text="Casdastrar Pedido" BorderPane.alignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="uncial_antiqua" text="Casdastrar Pedido" BorderPane.alignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
          </center>
       </BorderPane>
-      <VBox layoutX="256.0" layoutY="70.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
+      <VBox layoutX="256.0" layoutY="80.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <Label text="ID cliente:" />
+            <Label styleClass="uncial_antiqua" text="ID cliente:" />
             <TextField fx:id="idClient" prefWidth="285.0" promptText="id cliente" />
-            <Label text="Data:" />
+            <Label styleClass="uncial_antiqua" text="Data:" />
             <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
-            <Label text="Pagamento:" />
+            <Label styleClass="uncial_antiqua" text="Pagamento:" />
             <TextField fx:id="formaPag" prefWidth="285.0" promptText="forma de pagamento" />
-            <Label text="Preço:" />
+            <Label styleClass="uncial_antiqua" text="Preço:" />
             <TextField fx:id="valorPag" prefWidth="285.0" promptText="preço" />
          </children>
       </VBox>
-      <Button fx:id="salvar" layoutX="372.0" layoutY="408.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar" />
+      <Button fx:id="salvar" layoutX="354.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSalvarClick" styleClass="condado_button" text="Salvar" />
    </children>
 </AnchorPane>

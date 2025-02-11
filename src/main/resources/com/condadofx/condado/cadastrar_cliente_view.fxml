@@ -42,6 +42,6 @@
             <TextField fx:id="contato" prefWidth="285.0" promptText="contato" />
          </children>
       </VBox>
-      <Button fx:id="salvar" layoutX="351.0" layoutY="436.0" mnemonicParsing="false" onAction="#onSalvarClick" prefHeight="25.0" prefWidth="97.0" text="Salvar" />
+      <Button fx:id="salvar" layoutX="353.0" layoutY="410.0" mnemonicParsing="false" onAction="#onSalvarClick" styleClass="condado_button" text="Salvar" />
    </children>
 </AnchorPane>

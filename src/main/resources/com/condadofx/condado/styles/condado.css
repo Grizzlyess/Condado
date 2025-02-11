@@ -1,3 +1,12 @@
+/*fonte externa*/
+@font-face{
+    font-family:"Uncial Antiqua";
+    src: url("font/UncialAntiqua-Regular.ttf");
+}
+.uncial_antiqua{
+    -fx-font-family:"Uncial Antiqua";
+}
+
 .condado_container {
     -fx-background-color: #E8E773;
 }
@@ -17,4 +26,26 @@
 .condado_form_container {
     -fx-font-size: 15px;
     -fx-font-weight: bold;
+}
+/*Centraliza o conteúdo de todas as células da TableView*/
+.table-view .table-cell {
+    -fx-alignment: center;/*Centraliza o conteúdo da célula (imagem, texto, etc.)*/
+}
+
+/* Controla o tamanho da imagem dentro da célula */
+.table-view .table-cell .image-view {
+    -fx-preserve-ratio: true;  /* Mantém a proporção da imagem */
+}
+
+.condado_button {
+    -fx-border-width: 0;
+    -fx-font-size: 15px;
+    -fx-padding: 0 20px;
+    -fx-pref-height: 32px;
+    -fx-pref-width: 102px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #68EEF2;
+    -fx-text-fill: black;
+    -fx-font-weight: normal;
+    -fx-effect: dropshadow(gaussian, rgba(0, 118, 255, 0.39), 14, 0, 0, 4);
 }

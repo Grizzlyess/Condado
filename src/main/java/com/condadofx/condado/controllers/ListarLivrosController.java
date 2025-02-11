@@ -58,8 +58,8 @@ public class ListarLivrosController implements Initializable {
             if (livro.getFoto() != null) {
                 Image imagem = new Image(new ByteArrayInputStream(livro.getFoto()));
                 imageView.setImage(imagem);
-                imageView.setFitWidth(50);  // Largura da imagem na tabela
-                imageView.setFitHeight(50); // Altura da imagem na tabela
+                imageView.setFitWidth(150);  // Largura da imagem na tabela
+                imageView.setFitHeight(150); // Altura da imagem na tabela
             }
             return javafx.beans.binding.Bindings.createObjectBinding(() -> imageView);
         });

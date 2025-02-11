@@ -14,7 +14,7 @@
          <children>
             <BorderPane prefHeight="60.0" prefWidth="800.0" styleClass="condado_border_container">
                <center>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes" BorderPane.alignment="CENTER">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="uncial_antiqua" text="Clientes" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>

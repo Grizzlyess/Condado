@@ -21,7 +21,7 @@
                <center>
                   <Text fx:id="top" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Condado" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Uncial Antiqua" size="28.0" />
+                        <Font name="Uncial Antiqua" size="24.0" />
                      </font>
                   </Text>
                </center>
@@ -62,9 +62,9 @@
             </Pane>
             <BorderPane prefHeight="60.0" prefWidth="600.0" styleClass="condado_border_container">
                <center>
-                  <Text fx:id="bot" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui..." wrappingWidth="257.67376697063446" BorderPane.alignment="CENTER">
+                  <Text fx:id="bot" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilbo Bolseiro passou por aqui..." textAlignment="CENTER" wrappingWidth="343.1286314725876" BorderPane.alignment="CENTER">
                      <font>
-                        <Font size="17.0" />
+                        <Font size="16.0" />
                      </font></Text>
                </center>
             </BorderPane>
