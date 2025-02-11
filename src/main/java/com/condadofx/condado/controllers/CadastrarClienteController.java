@@ -4,6 +4,7 @@ import com.condadofx.condado.model.dao.DaoFactory;
 import com.condadofx.condado.model.entities.Cliente;
 import com.condadofx.condado.util.Alerta;
 import com.condadofx.condado.util.FontApli;
+import com.condadofx.condado.util.RestricCpf;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -72,5 +73,6 @@ public class CadastrarClienteController implements Initializable {
         Apli.AplicarFonteLabel(tx);
         // Exemplo de uso da classe para um unico texto
         Apli.AplicarFonte1Tx(titulo);
+        RestricCpf.CPF(id);
     }
 }

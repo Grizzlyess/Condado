@@ -1,7 +1,6 @@
 package com.condadofx.condado.controllers;
 
 import com.condadofx.condado.model.dao.DaoFactory;
-import com.condadofx.condado.model.dao.LivroDao;
 import com.condadofx.condado.model.entities.Livro;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
