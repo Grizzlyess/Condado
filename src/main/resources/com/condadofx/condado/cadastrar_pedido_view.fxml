@@ -33,7 +33,7 @@
          <children>
             <Label styleClass="uncial_antiqua" text="ID cliente:" />
             <ComboBox fx:id="idClient" prefWidth="285.0" promptText="id do cliente" />
-            <Label text="ISBN" />
+            <Label styleClass="uncial_antiqua" text="ISBN" />
             <ComboBox fx:id="isbn" prefWidth="285.0" promptText="isbn do livro" />
             <Label styleClass="uncial_antiqua" text="Data:" />
             <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
