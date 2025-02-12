@@ -43,7 +43,6 @@ CREATE TABLE pedido_livro (
     FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido) ON DELETE CASCADE
 );
 
-
 /*INSERINDO DADOS*/
 
 INSERT INTO cliente (id_cliente, nome_cliente, data_nascimento_cliente, email_cliente, contato_cliente)
@@ -56,13 +55,13 @@ VALUES
 ('860.194.237-52', 'Paola Oliveira', '1982-05-18', 'PaolaOliveira@icloud.com', '555-3197-8024'),
 ('372.841.560-96', 'Daenerys Targaryen', '1988-06-16', 'mae_de_dragoes@hotmail.com', '555-4002-8922'),
 ('651.320.784-97', 'Ednaldo Pereira', '1970-08-20', 'EdnaldoPereirarealoficial@hotmail.com', '555-6051-3847'),
-('70.513.249/8620-47', 'Hermione Granger', '1990-09-19', 'HermioneGranger@gmail.com', '555-4381-9562'),
-('36.951.842/0765-93', 'Marciano Lourenço', '1995-11-15', 'MarcianoLourenco@ifce.edu.br', '555-6702-3418'),
-('81.406.275/3249-18', 'Bruce Wayne', '1975-02-19', 'naosouobatman@icloud.com', '555-7382-6901'),
-('53.029.864/1724-76', 'Walter White', '1958-09-07', 'ProffWalterWhite@gmail.com', '555-4763-9285'),
-('24.967.035/1827-84', 'Barry Allen', '1992-03-23', 'naosouoflashconfia@gmail.com', '555-8109-2736'),
-('18.503.749/2630-21', 'Geralt de Rívia', '1980-12-25', 'Bruxaomatador123@hotmail.com', '555-9876-5432'),
-('96.041.325/7384-12', 'Bill Gates', '1955-10-28', 'billg@microsoft.com', '555-9218-5074');
+('70.513.249-86', 'Hermione Granger', '1990-09-19', 'HermioneGranger@gmail.com', '555-4381-9562'),
+('36.951.842-07', 'Marciano Lourenço', '1995-11-15', 'MarcianoLourenco@ifce.edu.br', '555-6702-3418'),
+('81.406.275-32', 'Bruce Wayne', '1975-02-19', 'naosouobatman@icloud.com', '555-7382-6901'),
+('53.029.864-17', 'Walter White', '1958-09-07', 'ProffWalterWhite@gmail.com', '555-4763-9285'),
+('24.967.035-18', 'Barry Allen', '1992-03-23', 'naosouoflashconfia@gmail.com', '555-8109-2736'),
+('18.503.749-26', 'Geralt de Rívia', '1980-12-25', 'Bruxaomatador123@hotmail.com', '555-9876-5432'),
+('96.041.325-73', 'Bill Gates', '1955-10-28', 'billg@microsoft.com', '555-9218-5074');
 
 INSERT INTO pedido (id_cliente, data_pedido, forma_pagamento, preco_pedido)
 VALUES
@@ -85,13 +84,14 @@ VALUES
     ('372.841.560-96', '2022-02-05', 'Pix', 59.90),
     ('651.320.784-97', '2022-05-10', 'Crédito', 134.80),
     ('651.320.784-97', '2022-08-15', 'Boleto', 152.47),
-    ('70.513.249/8620-47', '2022-11-20', 'Débito', 45.99),
-    ('36.951.842/0765-93', '2023-05-07', 'Crédito', 194.70),
-    ('81.406.275/3249-18', '2023-06-11', 'Pix', 117.07),
-    ('53.029.864/1724-76', '2023-09-16', 'Boleto', 279.60),
-    ('24.967.035/1827-84', '2023-12-21', 'Débito', 190.76),
-    ('18.503.749/2630-21', '2022-02-07', 'Crédito', 128.92),
-    ('96.041.325/7384-12', '2022-05-12', 'Boleto', 399.90);
+    ('70.513.249-86', '2022-11-20', 'Débito', 45.99),
+    ('36.951.842-07', '2023-05-07', 'Crédito', 194.70),
+    ('81.406.275-32', '2023-06-11', 'Pix', 117.07),
+    ('53.029.864-17', '2023-09-16', 'Boleto', 279.60),
+    ('24.967.035-18', '2023-12-21', 'Débito', 190.76),
+    ('18.503.749-26', '2022-02-07', 'Crédito', 128.92),
+    ('96.041.325-73', '2022-05-12', 'Boleto', 399.90);
+
 
 
 INSERT INTO livro (isbn, autor, genero, titulo, qtd_estoque, preco_livro, sinopse, editora)
