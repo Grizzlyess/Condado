@@ -59,8 +59,11 @@ public class CadastrarPedidoController implements Initializable {
                 if(valorPag.getText().contains(",")) {
                     valor = Double.parseDouble(valorPag.getText().replace(",", "."));
                 }else {valor = Double.parseDouble(valorPag.getText());}
-                if (livro_Qtd.getPreco_livro()>valor){
+
+                double precoF = livro_Qtd.getPreco_livro()*(Integer.parseInt(qtd.getText()));
+                if (precoF>valor){
                     Alerta.mostrarAlerta(Alert.AlertType.ERROR,"Erro!","O valor informado é menor que o do livro");
+                    return;
                 }
             } catch (NumberFormatException e) {
                 Alerta.mostrarAlerta(Alert.AlertType.ERROR, "Erro!", "Valor do pagamento inválido.");
@@ -69,9 +72,14 @@ public class CadastrarPedidoController implements Initializable {
             ped.setPreco_pedido(valor);
             DaoFactory.createPedidoDao().inserir(ped,isbn.getValue(),Integer.parseInt(qtd.getText()));
             int nQtd = livro_Qtd.getQtd_estoque() - (Integer.parseInt(qtd.getText()));
-            livro_Qtd.setQtd_estoque(nQtd);
-            DaoFactory.createLivroDao().atualizarLivro(livro_Qtd);
-            Alerta.mostrarAlerta(Alert.AlertType.INFORMATION, "Pedido Realizado!", "O pedido foi salvo com sucesso!");
+            if(nQtd<0){
+                Alerta.mostrarAlerta(Alert.AlertType.ERROR,"Erro!","A quantidade informada é maior que a disponível");
+            }
+            else {
+                livro_Qtd.setQtd_estoque(nQtd);
+                DaoFactory.createLivroDao().atualizarLivro(livro_Qtd);
+                Alerta.mostrarAlerta(Alert.AlertType.INFORMATION, "Pedido Realizado!", "O pedido foi salvo com sucesso!");
+            }
         } else {
             Alerta.mostrarAlerta(Alert.AlertType.ERROR, "Erro!", "Data não pode estar vazia!");
         }
