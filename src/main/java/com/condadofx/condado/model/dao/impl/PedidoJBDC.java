@@ -17,7 +17,7 @@ public class PedidoJBDC implements PedidoDao {
     }
 
     @Override
-    public void inserir(Pedido ped) {
+    public void inserir(Pedido ped,String isbn,int qtd) {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement("insert into pedido(id_cliente, data_pedido, forma_pagamento, preco_pedido) values(?,?,?,?);",Statement.RETURN_GENERATED_KEYS);
@@ -30,9 +30,16 @@ public class PedidoJBDC implements PedidoDao {
                 ResultSet rs = st.getGeneratedKeys();
                 if (rs.next()){
                     ped.setId_pedido(rs.getInt(1));
+
                 }else{
                     throw new RuntimeException("Erro ao inserir Id do Pedido!!");
                 }
+                st = conn.prepareStatement("insert into pedido_livro(isbn,id_pedido,qtd_pedido) values(?,?,?);");
+                st.setString(1,isbn);
+                st.setInt(2,rs.getInt(1));
+                st.setInt(3,qtd);
+                affLines = st.executeUpdate();
+                if(affLines<0){throw new RuntimeException("Erro ao inserir na tabela pedido_livro");}
             }else {
                 throw new RuntimeException("Erro ao inserir nenhuma linha afetada");
             }

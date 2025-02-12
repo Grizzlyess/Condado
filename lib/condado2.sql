@@ -36,7 +36,7 @@ CREATE TABLE livro (
 -- Tabela pedido_livro ajustada
 CREATE TABLE pedido_livro (
     isbn VARCHAR(36),
-    id_pedido INT auto_increment,
+    id_pedido INT,
     qtd_pedido INT,
     PRIMARY KEY (isbn, id_pedido),
     FOREIGN KEY (isbn) REFERENCES livro(isbn) ON DELETE CASCADE,

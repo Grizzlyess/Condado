@@ -33,14 +33,18 @@
          <children>
             <Label styleClass="uncial_antiqua" text="ID cliente:" />
             <ComboBox fx:id="idClient" prefWidth="285.0" promptText="id do cliente" />
+            <Label text="ISBN" />
+            <ComboBox fx:id="isbn" prefWidth="285.0" promptText="isbn do livro" />
             <Label styleClass="uncial_antiqua" text="Data:" />
             <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
+            <Label text="Qtd" />
+            <TextField fx:id="qtd" promptText="quantidade de livros" />
             <Label styleClass="uncial_antiqua" text="Pagamento:" />
             <TextField fx:id="formaPag" prefWidth="285.0" promptText="forma de pagamento" />
             <Label styleClass="uncial_antiqua" text="Preço:" />
             <TextField fx:id="valorPag" prefWidth="285.0" promptText="preço" />
          </children>
       </VBox>
-      <Button fx:id="salvar" layoutX="354.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSalvarClick" styleClass="condado_button" text="Salvar" />
+      <Button fx:id="salvar" layoutX="349.0" layoutY="488.0" mnemonicParsing="false" onAction="#onSalvarClick" styleClass="condado_button" text="Salvar" />
    </children>
 </AnchorPane>
