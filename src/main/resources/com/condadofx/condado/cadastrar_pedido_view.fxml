@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -31,7 +32,7 @@
       <VBox layoutX="256.0" layoutY="80.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
             <Label styleClass="uncial_antiqua" text="ID cliente:" />
-            <TextField fx:id="idClient" prefWidth="285.0" promptText="id cliente" />
+            <ComboBox fx:id="idClient" prefWidth="285.0" promptText="id do cliente" />
             <Label styleClass="uncial_antiqua" text="Data:" />
             <DatePicker fx:id="dataPedido" prefWidth="285.0" promptText="data do pedido" />
             <Label styleClass="uncial_antiqua" text="Pagamento:" />
