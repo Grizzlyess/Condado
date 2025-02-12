@@ -16,7 +16,7 @@ CREATE TABLE pedido (
     data_pedido DATE,
     forma_pagamento VARCHAR(20),
     preco_pedido DECIMAL(10, 2), -- Alterado para DECIMAL para precisão
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente) ON delete cascade
 );
 
 -- Tabela livro
