@@ -29,28 +29,31 @@
             </Text>
          </center>
       </BorderPane>
-      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="75.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="75.0" onMouseClicked="#onFotoClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/OIP.jpg" />
+         </image></ImageView>
       <VBox layoutX="256.0" layoutY="60.0" prefHeight="269.0" prefWidth="287.0" spacing="5.0" styleClass="condado_form_container">
          <children>
-            <Label text="ISBN:" />
+            <Label styleClass="uncial_antiqua" text="ISBN:" />
             <ComboBox fx:id="isbn" prefWidth="287.0" promptText="isbn" />
-            <Label text="Autor:" />
+            <Label styleClass="uncial_antiqua" text="Autor:" />
             <TextField fx:id="autor" promptText="autor" />
-            <Label text="Gênero" />
+            <Label styleClass="uncial_antiqua" text="Gênero" />
             <TextField fx:id="genero" promptText="gênero" />
-            <Label text="Título:" />
+            <Label styleClass="uncial_antiqua" text="Título:" />
             <TextField fx:id="titulo" promptText="título" />
-            <Label text="QTD Estoque:" />
+            <Label styleClass="uncial_antiqua" text="QTD Estoque:" />
             <TextField fx:id="qtd_estoque" promptText="qtd estoque" />
-            <Label text="Preço:" />
+            <Label styleClass="uncial_antiqua" text="Preço:" />
             <TextField fx:id="precoLivro" promptText="preço" />
-            <Label text="Sinopse" />
+            <Label styleClass="uncial_antiqua" text="Sinopse" />
             <TextField fx:id="sinopse" promptText="sinopse" />
-            <Label text="Editora:" />
+            <Label styleClass="uncial_antiqua" text="Editora:" />
             <TextField fx:id="editora" promptText="editora" />
          </children>
       </VBox>
-      <HBox layoutX="201.0" layoutY="575.0" prefHeight="34.0" prefWidth="397.0" spacing="45.0">
+      <HBox layoutX="201.0" layoutY="585.0" prefHeight="34.0" prefWidth="397.0" spacing="45.0">
          <children>
             <Button fx:id="atualizar" mnemonicParsing="false" onAction="#onAtualizarClick" styleClass="condado_button" text="Atualizar" />
             <Button fx:id="buscar" mnemonicParsing="false" onAction="#onBuscarClick" styleClass="condado_button" text="Buscar" />
